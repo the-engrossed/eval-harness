@@ -1,0 +1,16 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Warehouse note {{ invoice_id }}</title>
+<style>body{font-family:Georgia,serif;margin:2em}</style>
+</head>
+<body>
+<section class="page" data-page-no="1">
+  <h1>{{ seller }} warehouse note</h1>
+  <p>Order: invoice {{ invoice_id }} for {{ payer }}</p>
+  <p>Goods: {{ description }}</p>
+  <p>{{ segregated_line }}</p>
+  <p>Location: bay {{ bay }}, tagged with the customer's name.</p>
+  <p>These units are set aside and are not available to fill other orders.</p>
+</section>
+</body>
+</html>

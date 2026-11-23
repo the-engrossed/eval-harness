@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose describes testing samples, comparing invoices with bills of lading and bank deposits, and comparing invoice totals with general ledger postings."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled item in the item_ids list is named with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "Both flagged matters are tied to their item markers and their outcomes are described: a ledger shortfall for INV-1103 and partial shipment support for INV-1072."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": false,
+        "confidence": 0.78,
+        "reason": "A Conclusion: sentence is present and calls for resolving the open matters, but it does not explicitly qualify the conclusion as subject to or except for those matters."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.97,
+        "reason": "The cited evidence ID resolves to INV-1103's kept invoice amount field, and the claimed exceptions match the flagged ledger mismatch and partial shipment."
+      }
+    ]
+  },
+  "tokens_in": 13446,
+  "tokens_out": 981,
+  "latency_ms": 9874,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

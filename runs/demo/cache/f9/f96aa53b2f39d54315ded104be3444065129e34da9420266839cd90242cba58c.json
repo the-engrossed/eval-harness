@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 1,
+  "output": {
+    "prose": "Procedures performed: Compared invoice quantities and dates with bills of lading, agreed invoice totals to general ledger amounts and subsequent bank deposits, and reviewed shipment timing around year-end.\n\nSamples tested: [[item:INV-1011]], [[item:INV-1015]], [[item:INV-1041]], [[item:INV-1063]], [[item:INV-1064]], [[item:INV-1066]], [[item:INV-1071]], [[item:INV-1089]], [[item:INV-1108]], [[item:INV-1115]], [[item:INV-1116]], and [[item:INV-1117]], and [[item:INV-1118]].\n\nResults: All invoice totals agreed to subsequent bank deposits. All but one agreed to the general ledger, and all but one billed quantity agreed to the quantity shipped. No customer letters or warehouse notes were provided to corroborate any hold arrangement or inventory segregation.\n\nExceptions:\n- [[item:INV-1011]]: The invoice total [[ev:ev-INV-1011-invoice_amount]] agreed to the bank deposit, but the general ledger amount was lower.\n- [[item:INV-1064]]: The bill of lading supported fewer units than billed. No shipment evidence was provided for the remaining units, although the ledger and deposit agreed to the full invoice.\n- [[item:INV-1115]]: The invoice was dated [[ev:ev-INV-1115-invoice_date]], but all units shipped after year-end on [[ev:ev-INV-1115-ship_date]]. The evidence does not support recognition before year-end. The ledger posting date was not provided, so the actual recognition period could not be verified.\n\nConclusion: No other exceptions were identified in the sample. Reconcile the ledger difference, obtain shipment support for the remaining units, and verify the posting period before concluding on the flagged items.",
+    "guard_violations": []
+  },
+  "tokens_in": 9387,
+  "tokens_out": 420,
+  "latency_ms": 7965,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

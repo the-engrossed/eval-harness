@@ -1,0 +1,58 @@
+---
+description: Rules for the LangGraph agent, prompts, the model-swap layer and tracing.
+globs: auditlab/agent/**, auditlab/models/**, auditlab/telemetry.py, auditlab/guard.py, config/models.toml
+alwaysApply: false
+---
+
+# Agent, models, tracing
+
+## Agent (SPEC.md §5)
+- Exactly five nodes, in this order: `select_samples` → `extract_evidence` → `tie_out`
+  → `flag_exceptions` → `draft_workpaper`. No extra nodes, no loops, no tool-calling
+  sub-agents. Ask before changing the graph.
+- `tie_out` is deterministic Python. It never calls a model.
+- Answer keys never leak into the agent. Only `auditlab/models/stub.py`, `evals/` and
+  `feedback/` may read `answer_key.json`. Agent nodes, prompts and real-provider clients
+  must not import or receive it. A test enforces this (import scan of `auditlab/agent/`).
+- Each node reads and writes only its own keys on `AgentState` (SPEC.md §5.2).
+  Every node output is a Pydantic model so scorers can grade it without parsing prose.
+- Nodes receive a `ModelClient`, never a provider SDK directly. The graph must run
+  end to end with `StubModel`.
+- Prompts are versioned files: `auditlab/agent/prompts/<version>/<node>.md`, loaded by
+  name. Never edit a committed prompt version; create the next one.
+
+## Evidence and workpaper guard
+- `extract_evidence` is quote-or-drop: every evidence field carries `doc_id`, `page_no`
+  and a `quote` that is an exact substring of that page's normalized text. No quote,
+  no field — record it in `dropped` with a reason.
+- `draft_workpaper` writes prose with `[[ev:<evidence_id>]]` markers where amounts go.
+  `auditlab/guard.py` rejects any bare currency amount or digit run in model prose and any
+  marker that does not resolve. Guard failures are scored, not hidden.
+
+## Model-swap layer (SPEC.md §6)
+- One protocol, `ModelClient.complete(request: ModelRequest) -> ModelResponse`, returning
+  parsed structured output, token counts, latency in ms, and the provider's model id.
+- Providers: `stub`, `replay`, plus optional `openai`, `anthropic`, `gemini` behind
+  extras. A provider module imports its SDK lazily inside the client, so a missing SDK
+  only breaks that provider.
+- Model ids, prompt versions and prices come from `config/models.toml`. Never hardcode a
+  model id string in Python.
+- The cache key is sha256 of (provider, model_id, prompt_version, node, canonical JSON of
+  the input, run_index). `run_index` is in the key so N repeated runs are N real samples,
+  not one cached answer reused.
+- Stub models are oracle-plus-fault-injection and are labelled `simulated = true`.
+  Fault profiles are named and act at a single node (SPEC.md §6.3) so the regression
+  shows up at its source step.
+
+## Tracing (SPEC.md §7)
+- Every node run is an OpenTelemetry span with `gen_ai.*` attributes (system, request
+  model, input/output tokens) plus `audit.case_id`, `audit.run_index`, `audit.node`.
+  Spans go to `runs/<run_id>/spans.jsonl` via the JSONL exporter in `auditlab/telemetry.py`.
+- Remote sinks are optional and independent: LangSmith (`LANGSMITH_TRACING=true` +
+  `LANGSMITH_API_KEY`), Langfuse (`LANGFUSE_PUBLIC_KEY` + `LANGFUSE_SECRET_KEY` +
+  `LANGFUSE_HOST`), and any OTLP backend (`OTEL_EXPORTER_OTLP_ENDPOINT`). Each SDK is
+  imported only when its env vars are set. The demo and tests never need one.
+- When a remote sink is on, attach every `StepScore` to its trace there (LangSmith
+  feedback, Langfuse score). Use the installed SDK's documented API; don't guess names.
+- Store every enabled sink's ref on each step record; `trace_ref` is the first remote one,
+  else the local span id.

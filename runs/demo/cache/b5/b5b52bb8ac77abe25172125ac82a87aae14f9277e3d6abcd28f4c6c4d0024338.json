@@ -1,0 +1,38 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "select_samples",
+  "run_index": 1,
+  "output": {
+    "item_ids": [
+      "INV-1026",
+      "INV-1039",
+      "INV-1042",
+      "INV-1045",
+      "INV-1046",
+      "INV-1061",
+      "INV-1072",
+      "INV-1078",
+      "INV-1103",
+      "INV-1108",
+      "INV-1112",
+      "INV-1113",
+      "INV-1114",
+      "INV-1115",
+      "INV-1116",
+      "INV-1117",
+      "INV-1118",
+      "INV-1119"
+    ],
+    "rationale": [
+      "Rule one: every invoice at or above the key-item threshold.",
+      "Rule two: every invoice dated inside the cutoff window.",
+      "Rule three: every invoice with an entry in the credit memo log."
+    ]
+  },
+  "tokens_in": 3147,
+  "tokens_out": 103,
+  "latency_ms": 45,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

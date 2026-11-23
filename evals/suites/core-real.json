@@ -1,0 +1,58 @@
+{
+  "name": "core-real",
+  "cases": [
+    {
+      "case_id": "s1-mixA",
+      "seed": 1,
+      "mix": "A",
+      "tags": [
+        "cutoff",
+        "duplicate"
+      ]
+    },
+    {
+      "case_id": "s1-mixB",
+      "seed": 1,
+      "mix": "B",
+      "tags": [
+        "amount_mismatch",
+        "bill_and_hold",
+        "judgment",
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "s1-mixC",
+      "seed": 1,
+      "mix": "C",
+      "tags": [
+        "amount_mismatch",
+        "cutoff",
+        "judgment",
+        "partial_shipment"
+      ]
+    },
+    {
+      "case_id": "s1-mixD",
+      "seed": 1,
+      "mix": "D",
+      "tags": [
+        "bill_and_hold",
+        "cutoff",
+        "duplicate",
+        "judgment",
+        "missing_evidence"
+      ]
+    },
+    {
+      "case_id": "s1-mixE",
+      "seed": 1,
+      "mix": "E",
+      "tags": [
+        "amount_mismatch",
+        "judgment",
+        "partial_shipment"
+      ]
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 1,
+  "output": {
+    "prose": "Procedures performed: Compared sampled invoice totals with general ledger postings and available bank deposits. Compared invoice dates and quantities with available bills of lading to assess shipment and year-end cutoff. Reviewed the customer hold request and warehouse segregation note for the bill-and-hold item.\n\nSamples tested: [[item:INV-1002]], [[item:INV-1009]], [[item:INV-1015]], [[item:INV-1020]], [[item:INV-1026]], [[item:INV-1028]], [[item:INV-1039]], [[item:INV-1066]], [[item:INV-1079]], [[item:INV-1092]], [[item:INV-1110]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], [[item:INV-1119]], [[item:INV-1120]], and [[item:INV-1121]].\n\nResults: Eighteen samples had no exceptions. Available bank deposits agreed to the corresponding invoice totals. Where bills of lading were available, shipped quantities agreed to billed quantities, and shipment and billing fell on the same side of year-end.\n\nExceptions:\n- [[item:INV-1015]]: The invoice agreed to the ledger, but no bill of lading or bank statement line referencing it was provided. Shipment and collection could not be verified.\n- [[item:INV-1026]]: The ledger posting was below the invoice total [[ev:ev-INV-1026-invoice_amount]], while the bank deposit [[ev:ev-INV-1026-deposit_amount]] agreed to the invoice.\n- [[item:INV-1110]]: The ledger and subsequent deposit agreed to the invoice, but no bill of lading was provided. The customer requested a hold until [[ev:ev-INV-1110-hold_until_date]], and the segregated quantity matched the billed quantity. The evidence did not establish a substantive reason for the hold or show that the goods were ready for transfer and could not be redirected at year-end. Year-end recognition was therefore not supported.\n\nConclusion: The test identified three exceptions. Obtain alternative shipment and collection evidence for the unsupported item, reconcile the ledger discrepancy, and assess whether the bill-and-hold item requires a cutoff adjustment.",
+    "guard_violations": []
+  },
+  "tokens_in": 14614,
+  "tokens_out": 537,
+  "latency_ms": 8959,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

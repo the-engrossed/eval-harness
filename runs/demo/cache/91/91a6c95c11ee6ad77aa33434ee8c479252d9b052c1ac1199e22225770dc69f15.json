@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 2,
+  "output": {
+    "prose": "Procedures performed: Compared invoice dates and billed quantities with bills of lading, and tied invoice totals to general ledger entries and subsequent bank deposits.\n\nSamples tested: Eighteen invoices: [[item:INV-1026]], [[item:INV-1039]], [[item:INV-1042]], [[item:INV-1045]], [[item:INV-1046]], [[item:INV-1061]], [[item:INV-1072]], [[item:INV-1078]], [[item:INV-1103]], [[item:INV-1108]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], and [[item:INV-1119]].\n\nResults: All bank deposits matched the invoice totals. All but one invoice total matched the general ledger, and all but one billed quantity matched the documented shipment. In every case, the documented shipment was dated on or before the invoice date and fell in the same calendar year.\n\nExceptions: For [[item:INV-1103]], the invoice total [[ev:ev-INV-1103-invoice_amount]] matched the bank deposit, but the general ledger entry was lower. For [[item:INV-1072]], the bill of lading supported only part of the billed quantity. The customer paid in full, but no shipping evidence was provided for the remaining units. No customer letter or warehouse note was provided to substantiate a hold arrangement.\n\nConclusion: No exceptions were noted for the other sixteen samples. Reconcile the ledger difference and obtain evidence of shipment or other support for revenue recognition on the remaining units before clearing the exceptions.",
+    "guard_violations": []
+  },
+  "tokens_in": 12711,
+  "tokens_out": 399,
+  "latency_ms": 8398,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

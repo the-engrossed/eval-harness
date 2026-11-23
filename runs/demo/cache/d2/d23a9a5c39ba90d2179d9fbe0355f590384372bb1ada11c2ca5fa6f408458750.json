@@ -1,0 +1,15 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "draft_workpaper",
+  "run_index": 2,
+  "output": {
+    "prose": "Procedures performed: selected items under the stated sampling rule, agreed each invoice to its bill of lading and the bank statement, and tied each invoice to the general ledger. Samples tested: [[item:INV-1028]] ([[ev:ev-INV-1028-invoice_amount]]), [[item:INV-1029]] ([[ev:ev-INV-1029-invoice_amount]]), [[item:INV-1030]] ([[ev:ev-INV-1030-invoice_amount]]), [[item:INV-1034]] ([[ev:ev-INV-1034-invoice_amount]]), [[item:INV-1047]] ([[ev:ev-INV-1047-invoice_amount]]), [[item:INV-1068]] ([[ev:ev-INV-1068-invoice_amount]]), [[item:INV-1088]] ([[ev:ev-INV-1088-invoice_amount]]), [[item:INV-1110]] ([[ev:ev-INV-1110-invoice_amount]]), [[item:INV-1111]] ([[ev:ev-INV-1111-invoice_amount]]), [[item:INV-1112]] ([[ev:ev-INV-1112-invoice_amount]]), [[item:INV-1113]] ([[ev:ev-INV-1113-invoice_amount]]), [[item:INV-1114]] ([[ev:ev-INV-1114-invoice_amount]]), [[item:INV-1115]] ([[ev:ev-INV-1115-invoice_amount]]), [[item:INV-1116]] ([[ev:ev-INV-1116-invoice_amount]]), [[item:INV-1117]] ([[ev:ev-INV-1117-invoice_amount]]). Matters noted: duplicate invoice on [[item:INV-1030]]; cutoff error on [[item:INV-1113]]. Conclusion: revenue is fairly stated for the items tested, subject to the matters above.",
+    "guard_violations": []
+  },
+  "tokens_in": 7085,
+  "tokens_out": 308,
+  "latency_ms": 55,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

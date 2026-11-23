@@ -1,0 +1,18 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Letter from {{ payer }}</title>
+<style>body{font-family:Georgia,serif;margin:2em}</style>
+</head>
+<body>
+<section class="page" data-page-no="1">
+  <p>{{ request_date }}</p>
+  <p>To: {{ seller }}, {{ seller_address }}</p>
+  <p>From: {{ payer }}</p>
+  <p>Re: invoice {{ invoice_id }}, {{ quantity }} x {{ description }}</p>
+  <p>Our new distribution site is not ready to receive stock.</p>
+  <p>{{ hold_until_line }}</p>
+  <p>We have inspected and accept the goods, and title passes to us on the invoice date.</p>
+  <p>We will arrange collection with our own carrier.</p>
+</section>
+</body>
+</html>

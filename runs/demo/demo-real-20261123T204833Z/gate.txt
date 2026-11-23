@@ -1,0 +1,31 @@
+replay-local-qwen3-8b  DO_NOT_SHIP  (vs replay-openai-gpt-6.2-sol from demo-real-20261123T204833Z)
+  root cause: select_samples.required_recall (explains 1 critical drop)
+  root cause: extract_evidence.citation_validity (explains 2 critical drops)
+  root cause: extract_evidence.field_exact (explains 1 critical drop)
+  select_samples.required_recall  1.00 -> 0.82  cases: s1-mixB, s1-mixD, s1-mixE
+    drop confirmed over 5 paired cases: mean delta -0.180, 95% CI [-0.348, -0.032], margin 0.00
+    root step: select_samples.required_recall  1.00 -> 0.82  (missing required ids (rules: key_item, cutoff_window, credit_memo): INV-1002, INV-1020, INV-1026,...)
+    traces: local:demo-real-20261123T204833Z/5e528e7d2746cab4 local:demo-real-20261123T204833Z/e0070cbe21a10131 local:demo-real-20261123T204833Z/07c1ea06f29dd73e ...
+  extract_evidence.citation_validity  1.00 -> 0.00  cases: s1-mixA, s1-mixE
+    drop confirmed over 2 paired cases: mean delta -1.000, 95% CI [-1.000, -1.000], margin 0.00
+    root step: extract_evidence.citation_validity  1.00 -> 0.00  (node failed (agent): qwen3:8b at extract_evidence: prompt too large: 42503 tokens (estimated) > c...)
+    traces: local:demo-real-20261123T204833Z/0d15b9f5096971fb local:demo-real-20261123T204833Z/388bcf8c5c28a361 local:demo-real-20261123T204833Z/5d54678f3f792450 ...
+  flag_exceptions.planted_recall  cases: s1-mixA, s1-mixE
+    planted critical exception missed in 6 agent-origin runs
+    root step: extract_evidence.citation_validity  1.00 -> 0.00  (node failed (agent): qwen3:8b at extract_evidence: prompt too large: 42503 tokens (estimated) > c...)
+    traces: local:demo-real-20261123T204833Z/0d15b9f5096971fb local:demo-real-20261123T204833Z/388bcf8c5c28a361 local:demo-real-20261123T204833Z/5d54678f3f792450 ...
+  extract_evidence.field_exact  1.00 -> 0.00  cases: s1-mixA, s1-mixE
+    drop confirmed over 2 paired cases: mean delta -1.000, 95% CI [-1.000, -1.000], margin 0.02
+    root step: extract_evidence.field_exact  1.00 -> 0.00  (node failed (agent): qwen3:8b at extract_evidence: prompt too large: 42503 tokens (estimated) > c...)
+    traces: local:demo-real-20261123T204833Z/0d15b9f5096971fb local:demo-real-20261123T204833Z/388bcf8c5c28a361 local:demo-real-20261123T204833Z/5d54678f3f792450 ...
+  tie_out.tieout_accuracy
+    no paired case was scored for the candidate
+  draft_workpaper.guard_pass
+    no paired case was scored for the candidate
+  flag_exceptions.feedback_expectation_met
+    no paired case was scored for the candidate
+  select_samples.precision  1.00 -> 0.25  cases: s1-mixA, s1-mixB, s1-mixC, s1-mixD, s1-mixE
+    drop confirmed over 5 paired cases: mean delta -0.748, 95% CI [-0.874, -0.546], margin 0.02
+    traces: local:demo-real-20261123T204833Z/2b253f5b22b9fd89 local:demo-real-20261123T204833Z/89fde50a16c69ba7 local:demo-real-20261123T204833Z/57fcbbbd4100b872 ...
+  consistency: pass^N share 0.00 below min_pass_pow_n 0.90
+  infra: infra failure rate 0.67 above max_infra_failure_rate 0.05

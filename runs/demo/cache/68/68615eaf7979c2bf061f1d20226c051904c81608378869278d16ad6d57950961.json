@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose says samples were selected, invoices agreed to bills of lading and bank statements, and invoices tied to the general ledger."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled item in the item_ids list is named with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.97,
+        "reason": "Each flagged exception is linked to its item and described by type; INV-1104 is identified as an exception, giving the judgment outcome."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "There is a Conclusion: sentence, qualified with “subject to the matters above.”"
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "All cited evidence IDs resolve to kept invoice-amount fields for their corresponding items, and the stated matters match the flagged exceptions and judgment."
+      }
+    ]
+  },
+  "tokens_in": 16505,
+  "tokens_out": 422,
+  "latency_ms": 4549,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

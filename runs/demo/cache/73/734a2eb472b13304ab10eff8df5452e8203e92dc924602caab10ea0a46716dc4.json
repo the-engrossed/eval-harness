@@ -1,0 +1,33 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "flag_exceptions",
+  "run_index": 1,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1015",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "missing evidence indicated by the evidence"
+      },
+      {
+        "item_id": "INV-1026",
+        "type": "AMOUNT_MISMATCH",
+        "rationale": "amount mismatch indicated by the evidence"
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1110",
+        "type": "BILL_AND_HOLD",
+        "outcome": "exception",
+        "rationale": "states that the customer requested the hold; states that the goods were segregated from other inventory; states whether title and risk passed to the customer before year end"
+      }
+    ]
+  },
+  "tokens_in": 9844,
+  "tokens_out": 124,
+  "latency_ms": 46,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

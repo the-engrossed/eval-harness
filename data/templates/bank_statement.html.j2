@@ -1,0 +1,21 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>{{ bank }} statement</title>
+<style>body{font-family:Georgia,serif;margin:2em}table{border-collapse:collapse}td,th{border:1px solid #999;padding:4px 8px}</style>
+</head>
+<body>
+{% for page in pages %}
+<section class="page" data-page-no="{{ loop.index }}">
+  <h1>{{ bank }}</h1>
+  <p>Statement for {{ seller }}, {{ account }}</p>
+  <p>Period: {{ page.start }} to {{ page.end }}</p>
+  <table>
+    <tr><th>Date</th><th>Payer</th><th>Reference</th><th>Amount</th></tr>
+    {% for row in page.rows %}
+    <tr><td>{{ row.date }}</td><td>{{ row.payer }}</td><td>{{ row.reference }}</td><td>{{ row.amount }}</td></tr>
+    {% endfor %}
+  </table>
+</section>
+{% endfor %}
+</body>
+</html>

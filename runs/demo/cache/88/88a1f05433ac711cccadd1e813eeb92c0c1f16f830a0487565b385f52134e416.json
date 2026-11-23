@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose describes comparing invoices to bills of lading, deposits, and general ledger postings, and identifies the tested sample."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled invoice ID in the item list is named with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.97,
+        "reason": "Both flagged matters are tied to their item markers and described: the ledger amount discrepancy for INV-1103 and partial shipment support for INV-1072."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.82,
+        "reason": "A Conclusion: sentence is present and the follow-up to reconcile and obtain support before concluding qualifies the result given the flagged matters."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The evidence markers resolve to kept fields for the stated amounts and items, and the claimed exceptions match the flagged exception and judgment."
+      }
+    ]
+  },
+  "tokens_in": 13303,
+  "tokens_out": 813,
+  "latency_ms": 8253,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

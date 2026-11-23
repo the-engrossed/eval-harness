@@ -1,0 +1,67 @@
+---
+description: Core invariants for eval-harness. Applies to every change.
+alwaysApply: true
+---
+
+# eval-harness — core rules
+
+SPEC.md is the source of truth. Read the section a task names before writing code.
+If a request conflicts with SPEC.md or these rules, say so and stop. Do not work around it.
+
+## What this repo is
+A model-swap eval pipeline for an audit revenue-testing agent. The agent is small on
+purpose (5 nodes). The eval layer is the product: scorers, runner, gate, feedback loop,
+scorecard. If a change makes the agent smarter but the evals no weaker, it is out of scope.
+
+## Must run offline
+- `make demo` runs with no API keys, no Docker, no network, in under 60 seconds.
+- Real model providers and LangSmith are optional, switched on only by env vars
+  (see SPEC.md §8). Code paths that need a key read it at the point of use and raise a
+  clear error if missing. Never at import time.
+- Never call a network API from tests. Tests use stub models or the replay cache.
+
+## Data honesty
+- Synthetic data only. Invented company, invented people, invented documents.
+  No real company, client, auditor, or product names in data, prompts, or fixtures.
+- Never hardcode a metric, score, price, or result in README, templates, or code.
+  Every number shown comes from a run artifact under `runs/`.
+- Stub-model results are simulated. Anything rendered from a stub run carries the
+  `simulated: true` flag and a visible SIMULATED label. Never strip it.
+- Model prices live only in `config/models.toml`, each with `source_url` and `as_of`.
+  A real model with no price entry is an error, not $0.
+
+## Names
+- Python package is `auditlab`. Do not create a module named after a banned name.
+- Banned names are listed only in the local, gitignored `.names-denylist`. They must not
+  appear anywhere in tracked files (README and docs included). `make names` runs
+  `scripts/check_names.sh` against that list (skipped when the list is absent, as in CI);
+  it has no allowlist. Never add one, and never copy the list into a tracked file.
+- Docs never say where any code came from.
+- No claims of affiliation with any real company.
+
+## Money and numbers
+- Money is integer cents (`int`). Model cost is integer USD micros. Never `float` for
+  money. Convert at the parse boundary only.
+- Arithmetic (tie-outs, totals, deltas) is deterministic Python, never an LLM.
+
+## Style
+- Python 3.12, full type hints, Pydantic v2 models, `ruff check` and `mypy --strict` clean.
+- Pure functions for scorers and gate logic: no I/O, no network, no randomness inside.
+- Side effects (files, network, tracing export) only in `auditlab/models/`, `auditlab/telemetry.py`,
+  `evals/runner.py`, `feedback/`, `report/`, and CLI entry points.
+- Modules under ~200 lines. Split rather than grow.
+- Fail loudly. No silent fallbacks, no "N/A", no placeholder values. Raise with a message
+  that says what is missing and how to fix it.
+- Seeded randomness only (`random.Random(seed)`); never the global RNG.
+- No notebooks. No JavaScript frameworks. No CDN links (the scorecard must open offline).
+
+## Working style
+- Plan before diffing. For anything touching more than one file, list the files and the
+  change, then wait for approval.
+- Failing test first, then implementation.
+- One task per change. Do not refactor across modules opportunistically.
+- Do not add dependencies beyond SPEC.md §3 without asking.
+- Never edit committed answer keys under `data/engagements/` by hand; regenerate them
+  from `data/generate.py`.
+- Never edit `evals/baselines/production.json` to make the gate pass. Re-baselining is an
+  explicit command (`make baseline`) the human runs.

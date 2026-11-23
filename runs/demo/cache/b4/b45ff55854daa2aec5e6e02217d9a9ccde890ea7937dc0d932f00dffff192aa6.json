@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.91,
+        "reason": "The prose identifies samples tested, compares invoice quantities and dates with bills of lading, traces invoice totals to bank deposits, and agrees invoice totals to the general ledger."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled invoice from INV-1028 through INV-1117 is named with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose identifies INV-1030’s duplicate and missing supporting BOL/deposit outcome, and INV-1113’s post-year-end shipment/cutoff issue."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.78,
+        "reason": "A Conclusion sentence is present and calls for assessing adjustments for the duplicate and cutoff matters before closing the test, making the conclusion conditional on resolving them."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "All evidence markers resolve to kept fields for the cited items, and the claimed duplicate and cutoff exceptions agree with the flagged exceptions."
+      }
+    ]
+  },
+  "tokens_in": 11144,
+  "tokens_out": 1074,
+  "latency_ms": 10064,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

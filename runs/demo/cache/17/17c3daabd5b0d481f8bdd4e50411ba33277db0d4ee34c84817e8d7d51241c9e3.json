@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose describes comparing invoices with bills of lading, agreeing invoice totals to the general ledger and subsequent bank deposits, and identifies the sample tested."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 13 sampled invoice IDs are named with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose identifies and describes the flagged ledger mismatch for INV-1011, the partial shipment for INV-1064, and the cutoff issue for INV-1115, with each item marked."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.91,
+        "reason": "A Conclusion: sentence is present and does not give an unqualified clean conclusion; it calls for resolving the flagged matters before concluding on them."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "Each cited evidence ID corresponds to a kept field for the referenced invoice. The described exceptions and other tie-out claims agree with the flagged exceptions and tie-out results."
+      }
+    ]
+  },
+  "tokens_in": 9996,
+  "tokens_out": 713,
+  "latency_ms": 7667,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

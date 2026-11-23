@@ -1,0 +1,210 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Release scorecard</title>
+<style>
+  :root {
+    --ink: #1c2430; --muted: #5d6877; --line: #d9dee5; --paper: #ffffff; --wash: #f4f6f9;
+    --ship: #1f7a4d; --ship-bg: #e3f4ea; --review: #8a5a00; --review-bg: #fdf1d8;
+    --block: #a3242b; --block-bg: #fbe4e5; --sim: #4b4f8c; --sim-bg: #e8e9f7;
+    --ok: #e3f4ea; --warn: #fdf1d8; --bad: #f6cfd1; --base: #eef1f5; --sat: #eceff2;
+  }
+  * { box-sizing: border-box; }
+  body { margin: 0; background: var(--wash); color: var(--ink);
+         font: 14px/1.45 -apple-system, "Segoe UI", Helvetica, Arial, sans-serif; }
+  main { max-width: 1040px; margin: 0 auto; padding: 24px 16px 32px; background: var(--paper); }
+  h1 { font-size: 20px; margin: 0 0 4px; }
+  h2 { font-size: 15px; margin: 22px 0 8px; padding-bottom: 4px; border-bottom: 1px solid var(--line); }
+  p { margin: 4px 0; }
+  .sub, .note { color: var(--muted); font-size: 12px; }
+  .headline { font-size: 16px; margin: 12px 0 14px; padding: 10px 12px;
+              background: var(--wash); border-left: 4px solid var(--ink); }
+  table { border-collapse: collapse; width: 100%; font-variant-numeric: tabular-nums; }
+  th, td { padding: 5px 8px; border-bottom: 1px solid var(--line); text-align: left; vertical-align: top; }
+  th { font-size: 12px; color: var(--muted); font-weight: 600; }
+  td.num, th.num { text-align: right; }
+  .badge { display: inline-block; padding: 1px 7px; border-radius: 3px; font-size: 11px;
+           font-weight: 700; letter-spacing: .02em; white-space: nowrap; }
+  .SHIP { color: var(--ship); background: var(--ship-bg); }
+  .NEEDS_REVIEW { color: var(--review); background: var(--review-bg); }
+  .DO_NOT_SHIP { color: var(--block); background: var(--block-bg); }
+  .SIM { color: var(--sim); background: var(--sim-bg); }
+  .mono { font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 12px; }
+  .refs { color: var(--muted); font-size: 11px; word-break: break-all; }
+  .refs a { color: var(--muted); }
+  .code { display: block; color: var(--muted); font-family: ui-monospace, Menlo, Consolas, monospace; font-size: 11px; }
+  .tag { display: inline-block; margin-left: 6px; padding: 0 5px; border: 1px solid var(--line);
+         border-radius: 3px; color: var(--muted); font-size: 10px; font-weight: 600; vertical-align: 1px; }
+  .banner { margin: 10px 0 0; padding: 7px 12px; color: var(--sim); background: var(--sim-bg);
+            border-radius: 3px; font-size: 13px; font-weight: 600; }
+  .detail { margin: 8px 0 12px; }
+  .detail h3 { font-size: 13px; margin: 10px 0 4px; }
+  .detail ul { margin: 0; padding-left: 18px; }
+  .detail li { margin: 0 0 8px; }
+  .heat td.cell { text-align: center; width: 120px; }
+  .cell.ok { background: var(--ok); } .cell.warn { background: var(--warn); }
+  .cell.bad { background: var(--bad); } .cell.base { background: var(--base); }
+  .cell.na { color: var(--muted); }
+  tr.sat td { background: var(--sat) !important; color: var(--muted); }
+  .delta { display: block; font-size: 11px; color: var(--muted); }
+  .group td { background: var(--paper); font-weight: 700; font-size: 12px; padding-top: 10px; }
+  .legend span { display: inline-block; padding: 0 6px; margin-right: 6px; font-size: 11px; }
+  .grid2 { display: grid; grid-template-columns: 1fr 1fr; gap: 0 24px; }
+  .trend svg { display: block; background: var(--wash); }
+  .trend polyline { fill: none; stroke: var(--ink); stroke-width: 1.5; }
+  footer { margin-top: 24px; padding-top: 8px; border-top: 1px solid var(--line);
+           color: var(--muted); font-size: 11px; }
+  footer span { margin-right: 14px; white-space: nowrap; }
+  @media (max-width: 720px) { .grid2 { grid-template-columns: 1fr; } }
+  @media print {
+    body { background: #fff; font-size: 11px; }
+    main { max-width: none; padding: 0; }
+    h2 { margin-top: 12px; break-after: avoid; }
+    section { break-inside: avoid; }
+    * { -webkit-print-color-adjust: exact; print-color-adjust: exact; }
+  }
+</style>
+</head>
+<body>
+<main>
+<h1>Release scorecard</h1>
+<p class="sub">Candidates gated against production config <span class="mono">{{ baseline }}</span>
+  on suite {{ suite }}.</p>
+{% if simulated_banner %}<p class="banner" id="simulated-banner">{{ simulated_banner }}</p>{% endif %}
+
+<p class="headline" id="headline">{{ headline }}</p>
+
+<section id="verdicts">
+<h2>Verdicts</h2>
+<table>
+  <tr><th>Candidate</th><th>Verdict</th><th>Root cause</th></tr>
+  {% for v in verdicts %}
+  <tr>
+    <td class="mono">{{ v.config_id }}{% if show_badges and v.simulated %} <span class="badge SIM">SIMULATED</span>{% endif %}</td>
+    <td><span class="badge {{ v.verdict }}" data-verdict="{{ v.config_id }}">{{ v.verdict }}</span></td>
+    <td>
+      {% for line in v.root_causes %}<div>{{ line }}</div>{% else %}<span class="note">—</span>{% endfor %}
+      {% if v.traces.first %}<div class="refs">trace {{ v.traces.first }}{% if v.traces.more %} · <a href="#details-{{ v.config_id }}">+{{ v.traces.more }} more</a>{% endif %}</div>{% endif %}
+    </td>
+  </tr>
+  {% endfor %}
+</table>
+</section>
+
+<section id="heatmap">
+<h2>Critical step metrics</h2>
+<table class="heat">
+  <tr><th>Metric</th>{% for c in configs %}<th class="num" style="text-align:center">{{ c.config_id }}{% if show_badges and c.simulated %} <span class="badge SIM">SIMULATED</span>{% endif %}</th>{% endfor %}</tr>
+  {% for kind in ["process", "outcome"] %}
+  {% set rows = heatmap | selectattr("kind", "equalto", kind) | list %}
+  {% if rows %}
+  <tr class="group"><td colspan="{{ configs | length + 1 }}">{{ kind | capitalize }}{% if kind == "process" %}: was the procedure followed{% else %}: did the work come out right{% endif %}</td></tr>
+  {% for row in rows %}
+  <tr{% if row.saturated %} class="sat"{% endif %}>
+    <td>{{ row.label }}{% if row.saturated %}<span class="tag">saturated*</span>{% endif %}<span class="code">{{ row.metric }}</span></td>
+    {% for cell in row.cells %}<td class="cell {{ cell.cls }}">{{ cell.text }}{% if cell.delta %}<span class="delta">{{ cell.delta }}</span>{% endif %}</td>{% endfor %}
+  </tr>
+  {% endfor %}
+  {% endif %}
+  {% endfor %}
+</table>
+<p class="legend note">Cell = accuracy (mean over case × run, agent-origin only); small figure = change vs {{ baseline }}.
+  <span class="cell ok">no drop</span><span class="cell warn">drop &lt; 0.05</span><span class="cell bad">drop ≥ 0.05</span>
+</p>
+{% if saturation_assessed %}
+{% if heatmap | selectattr("saturated") | list %}<p class="note" id="saturated-note">* {{ saturated_note }}</p>{% endif %}
+{% else %}
+<p class="note">Saturation not assessed: it needs two or more configs in the run.</p>
+{% endif %}
+</section>
+
+<div class="grid2">
+<section id="final-only">
+<h2>Missed by final-output-only grading</h2>
+<table>
+  <tr><th>Config</th><th class="num">Missed</th></tr>
+  {% for c in configs %}<tr><td class="mono">{{ c.config_id }}</td><td class="num">{{ c.missed }}</td></tr>{% endfor %}
+</table>
+<p class="note">Runs that fail a critical step metric but whose workpaper alone (guard plus judge criteria, no answer key) looks fine: errors a reviewer of the deliverable would not catch.</p>
+</section>
+
+<section id="consistency">
+<h2>Consistency</h2>
+<table>
+  <tr><th>Config</th><th class="num">pass^N share</th><th class="num">Outcome agreement</th></tr>
+  {% for c in configs %}<tr><td class="mono">{{ c.config_id }}</td><td class="num">{{ c.pass_pow_n }}</td><td class="num">{{ c.agreement }}</td></tr>{% endfor %}
+</table>
+<p class="note">pass^N: share of cases that pass in every run. Outcome agreement: share of runs whose exceptions and judgments match the case's most common set.</p>
+</section>
+</div>
+
+<section id="cost">
+<h2>Cost and latency per workpaper</h2>
+<table>
+  <tr><th>Config</th><th class="num">Cost</th><th class="num">vs {{ baseline }}</th><th class="num">Judge cost</th><th class="num">p50 latency</th><th class="num">p95 latency</th></tr>
+  {% for c in configs %}
+  <tr><td class="mono">{{ c.config_id }}{% if show_badges and c.simulated %} <span class="badge SIM">SIMULATED</span>{% endif %}</td>
+    <td class="num">{{ c.cost }}</td><td class="num">{{ c.vs_base }}</td><td class="num">{{ c.judge_cost }}</td>
+    <td class="num">{{ c.p50 }}</td><td class="num">{{ c.p95 }}</td></tr>
+  {% endfor %}
+</table>
+<p class="note">Simulated configs use simulated token counts, prices and latencies; they are not measurements of any real model.</p>
+</section>
+
+<div class="grid2">
+<section id="reliability">
+<h2>Reliability</h2>
+<table>
+  <tr><th>Config</th><th class="num">Infra failure rate</th><th class="num">Data failure rate</th></tr>
+  {% for c in configs %}<tr><td class="mono">{{ c.config_id }}</td><td class="num">{{ c.infra_rate }} ({{ c.infra_runs }})</td><td class="num">{{ c.data_rate }} ({{ c.data_runs }})</td></tr>{% endfor %}
+</table>
+<p class="note">Provider errors and broken cases, counted apart from accuracy: they never make a model look worse.</p>
+</section>
+
+<section id="trend" class="trend">
+<h2>Trend: {{ trend_metric }}</h2>
+<table>
+  {% for t in trends %}
+  <tr><td class="mono">{{ t.config_id }}</td>
+    <td>{% if t.points %}<svg width="{{ svg_w }}" height="{{ svg_h }}" viewBox="0 0 {{ svg_w }} {{ svg_h }}" role="img" aria-label="{{ t.config_id }}: {{ t.first }} to {{ t.last }} over {{ t.n }} runs"><polyline points="{{ t.points }}"/></svg>{% else %}<span class="note">not enough runs yet ({{ t.n }})</span>{% endif %}</td>
+    <td class="num">{% if t.points %}{{ t.first }} → {{ t.last }} <span class="note">({{ t.n }} runs)</span>{% endif %}</td></tr>
+  {% endfor %}
+</table>
+</section>
+</div>
+
+{% if details %}
+<section id="details">
+<h2>Gate details</h2>
+{% for d in details %}
+<div class="detail" id="details-{{ d.config_id }}">
+<h3><span class="mono">{{ d.config_id }}</span> <span class="badge {{ d.verdict }}">{{ d.verdict }}</span></h3>
+<ul>
+{% for it in d["items"] %}
+  <li>{% if it.note %}<span class="tag">note</span> {% endif %}<strong>{{ it.title }}</strong>{% if it.change %} {{ it.change }}{% endif %}{% if it.code %}<span class="code">{{ it.code }}</span>{% endif %}
+    <div class="note">{{ it.message }}</div>
+    {% if it.root %}<div class="note">root step: {{ it.root.label }} ({{ it.root.code }} {{ it.root.change }})</div>{% endif %}
+    {% if it.cases %}<div class="refs">cases: {{ it.cases | join(", ") }}</div>{% endif %}
+    {% if it.traces %}<div class="refs">traces: {{ it.traces | join(" ") }}</div>{% endif %}
+  </li>
+{% endfor %}
+</ul>
+</div>
+{% endfor %}
+</section>
+{% endif %}
+
+<section id="feedback">
+<h2>Feedback-derived cases</h2>
+<p><strong>{{ feedback_cases }}</strong> case{{ "" if feedback_cases == 1 else "s" }} from reviewer rejections (evals/suites/from_feedback/).</p>
+</section>
+
+<footer id="footer">
+  <span>run {{ run_id }}</span><span>git {{ git_sha }}</span><span>suite hash {{ suite_hash }}</span>
+  <span>judge {{ judge_id }}</span><span>generated {{ generated_at }}</span>
+</footer>
+</main>
+</body>
+</html>

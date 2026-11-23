@@ -1,0 +1,52 @@
+{
+  "provider": "openai_compat",
+  "model_id": "qwen3:8b",
+  "node": "select_samples",
+  "run_index": 0,
+  "output": {
+    "item_ids": [
+      "INV-1007",
+      "INV-1029",
+      "INV-1032",
+      "INV-1039",
+      "INV-1046",
+      "INV-1051",
+      "INV-1055",
+      "INV-1063",
+      "INV-1064",
+      "INV-1077",
+      "INV-1078",
+      "INV-1080",
+      "INV-1096",
+      "INV-1105",
+      "INV-1106",
+      "INV-1107",
+      "INV-1108",
+      "INV-1109",
+      "INV-1110",
+      "INV-1111",
+      "INV-1112",
+      "INV-1113",
+      "INV-1114",
+      "INV-1115",
+      "INV-1116",
+      "INV-1117",
+      "INV-1118",
+      "INV-1119",
+      "INV-1120",
+      "INV-1121",
+      "INV-1122",
+      "INV-1123"
+    ],
+    "rationale": [
+      "1. Key items: Selected invoices with amount_cents >= 2500000 (e.g., INV-1007, INV-1029, INV-1032, INV-1039, INV-1046, INV-1051, INV-1055, INV-1063, INV-1064).",
+      "2. Cutoff window: Selected invoices dated between 2025-12-27 and 2026-01-05 (e.g., INV-1077, INV-1078, INV-1080, INV-1096, INV-1105, INV-1106, INV-1107, INV-1108, INV-1109, INV-1110, INV-1111, INV-1112, INV-1113, INV-1114, INV-1115, INV-1116, INV-1117, INV-1118, INV-1119, INV-1120, INV-1121, INV-1122, INV-1123).",
+      "3. Every invoice with an entry in the credit memo log: Selected invoices (e.g., INV-1077, INV-1078, INV-1096)."
+    ]
+  },
+  "tokens_in": 5722,
+  "tokens_out": 560,
+  "latency_ms": 19851,
+  "provider_model_id": "qwen3:8b",
+  "simulated": false
+}

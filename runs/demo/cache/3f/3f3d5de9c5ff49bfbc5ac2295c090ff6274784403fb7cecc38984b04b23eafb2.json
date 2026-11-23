@@ -1,0 +1,33 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 0,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1011",
+        "type": "AMOUNT_MISMATCH",
+        "rationale": "The GL records $69,971.32, which is $416.20 below the invoice and bank deposit of $70,387.52."
+      },
+      {
+        "item_id": "INV-1115",
+        "type": "CUTOFF_ERROR",
+        "rationale": "The invoice is dated 2025-12-30, but the bill of lading shows all 317 units shipped on 2026-01-03, after year-end. The shipment does not support 2025 recognition; the GL posting date was not provided."
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1064",
+        "type": "PARTIAL_SHIPMENT",
+        "outcome": "exception",
+        "rationale": "The invoice bills 304 units, but the bill of lading shows only 289 shipped on 2025-06-21. The deposit matches the full invoice, but no shipment evidence supports the remaining 15 units."
+      }
+    ]
+  },
+  "tokens_in": 9292,
+  "tokens_out": 325,
+  "latency_ms": 6558,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

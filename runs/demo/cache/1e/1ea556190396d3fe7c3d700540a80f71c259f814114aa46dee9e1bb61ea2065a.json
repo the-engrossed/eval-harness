@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "prose": "Procedures performed: Agreed invoice totals to the general ledger and, where available, to subsequent bank deposits. Compared billed quantities and invoice dates with bills of lading, reviewed shipments around year-end for cutoff, and checked the flagged potential duplicate for separate shipment and deposit support.\n\nSamples tested: [[item:INV-1028]], [[item:INV-1029]], [[item:INV-1030]], [[item:INV-1034]], [[item:INV-1047]], [[item:INV-1068]], [[item:INV-1088]], [[item:INV-1110]], [[item:INV-1111]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], and [[item:INV-1117]].\n\nResults: All fifteen invoice totals agreed to the general ledger. Fourteen also agreed to subsequent bank deposits and had shipping support for the full billed quantities. No customer letters or warehouse notes were provided to support bill-and-hold treatment.\n\nExceptions: [[item:INV-1030]] matches [[item:INV-1029]] on customer, invoice date, product, quantity, and amount. Both tie to the ledger, but only [[item:INV-1029]] has shipment and deposit support. The potential duplicate at [[item:INV-1030]], for [[ev:ev-INV-1030-invoice_amount]], remains unresolved. [[item:INV-1113]] was invoiced on [[ev:ev-INV-1113-invoice_date]], but the full quantity shipped after year-end on [[ev:ev-INV-1113-ship_date]]. The evidence does not support recognizing [[ev:ev-INV-1113-invoice_amount]] in the year under test. The ledger posting date was not supplied, so a cutoff misstatement could not be confirmed.\n\nConclusion: No exceptions were noted for the other thirteen samples. Investigate the potential duplicate and verify the cutoff item's ledger posting period before determining whether adjustments are needed.",
+    "guard_violations": []
+  },
+  "tokens_in": 10530,
+  "tokens_out": 456,
+  "latency_ms": 8537,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

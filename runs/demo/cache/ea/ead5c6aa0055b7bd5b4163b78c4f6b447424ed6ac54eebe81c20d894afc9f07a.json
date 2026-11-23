@@ -1,0 +1,28 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 1,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1103",
+        "type": "AMOUNT_MISMATCH",
+        "rationale": "The GL records $18,793.43, which is $484.48 below the invoice and bank deposit, both $19,277.91."
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1072",
+        "type": "PARTIAL_SHIPMENT",
+        "outcome": "exception",
+        "rationale": "The invoice (p. 1) bills 330 units, but the August 7, 2025 bill of lading (p. 1) shows only 222 shipped. The deposit matches the full invoice, but no shipping evidence was provided for the remaining 108 units."
+      }
+    ]
+  },
+  "tokens_in": 12833,
+  "tokens_out": 245,
+  "latency_ms": 5562,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

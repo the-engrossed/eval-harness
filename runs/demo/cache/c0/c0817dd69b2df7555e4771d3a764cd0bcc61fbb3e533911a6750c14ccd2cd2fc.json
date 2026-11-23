@@ -1,0 +1,28 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 0,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1103",
+        "type": "AMOUNT_MISMATCH",
+        "rationale": "The general ledger records $18,793.43, which is $484.48 less than the $19,277.91 shown on both the invoice and the bank statement."
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1072",
+        "type": "PARTIAL_SHIPMENT",
+        "outcome": "exception",
+        "rationale": "The invoice bills 330 units, but the August 7, 2025 bill of lading documents shipment of only 222. The bank statement shows full payment, but no shipping evidence was provided for the remaining 108 units."
+      }
+    ]
+  },
+  "tokens_in": 12671,
+  "tokens_out": 178,
+  "latency_ms": 4495,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

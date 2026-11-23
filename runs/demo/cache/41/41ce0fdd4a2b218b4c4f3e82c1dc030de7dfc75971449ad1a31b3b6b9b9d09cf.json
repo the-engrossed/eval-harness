@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 2,
+  "output": {
+    "prose": "Procedures performed: Compared invoice amounts with general ledger amounts and subsequent bank deposits. Compared billed quantities with bills of lading and reviewed invoice and shipment dates for cutoff.\n\nSamples tested: [[item:INV-1011]], [[item:INV-1015]], [[item:INV-1041]], [[item:INV-1063]], [[item:INV-1064]], [[item:INV-1066]], [[item:INV-1071]], [[item:INV-1089]], [[item:INV-1108]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], and [[item:INV-1118]].\n\nResults: Bank deposits matched every invoice. General ledger amounts matched except for the ledger shortfall noted below. Billed quantities agreed with shipping records except for the partial shipment noted below. No customer letters or warehouse notes were provided to support bill-and-hold treatment.\n\nExceptions:\n- [[item:INV-1011]] — The invoice amount [[ev:ev-INV-1011-invoice_amount]] agreed with the bank deposit [[ev:ev-INV-1011-deposit_amount]], but the ledger amount was lower.\n- [[item:INV-1064]] — The bill of lading supports only part of the billed quantity. The full bank deposit does not establish that the remaining units shipped.\n- [[item:INV-1115]] — The invoice was dated [[ev:ev-INV-1115-invoice_date]], but all units shipped on [[ev:ev-INV-1115-ship_date]], after year-end. The shipment does not support recognition in the prior fiscal year. The ledger posting date was not provided, so the actual recognition period could not be verified.\n\nConclusion: Cash receipts agreed to the sampled invoices. Before concluding on revenue, reconcile the ledger shortfall, obtain shipment or other recognition support for the remaining units, and verify the posting period for the cutoff exception.",
+    "guard_violations": []
+  },
+  "tokens_in": 9389,
+  "tokens_out": 432,
+  "latency_ms": 7806,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "prose": "Procedures performed: Compared invoice amounts with general ledger postings and subsequent bank deposits. Compared billed quantities and invoice dates with shipped quantities and shipment dates on bills of lading, including for items near year-end.\n\nSamples tested: [[item:INV-1026]], [[item:INV-1039]], [[item:INV-1042]], [[item:INV-1045]], [[item:INV-1046]], [[item:INV-1061]], [[item:INV-1072]], [[item:INV-1078]], [[item:INV-1103]], [[item:INV-1108]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], and [[item:INV-1119]].\n\nResults: Bank deposits matched all sampled invoice amounts. Ledger postings and shipped quantities agreed with the invoices except as noted below. No sampled invoice and shipment dates fell on opposite sides of year-end.\n\nExceptions: For [[item:INV-1103]], the ledger posting was lower than the invoice amount [[ev:ev-INV-1103-invoice_amount]], which matched the bank deposit [[ev:ev-INV-1103-deposit_amount]]. For [[item:INV-1072]], the bill of lading supported only part of the billed quantity. The customer paid in full, but no shipping evidence was provided for the remaining units. No customer letter or warehouse note was provided to verify a hold date or segregated quantity.\n\nConclusion: No other exceptions were identified in the sample. Reconcile the ledger discrepancy and obtain evidence of shipment or other support for revenue recognition on the unshipped balance before concluding on the exceptions.",
+    "guard_violations": []
+  },
+  "tokens_in": 12714,
+  "tokens_out": 400,
+  "latency_ms": 7858,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

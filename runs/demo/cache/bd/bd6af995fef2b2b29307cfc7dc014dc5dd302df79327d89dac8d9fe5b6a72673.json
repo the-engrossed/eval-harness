@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "select_samples",
+  "run_index": 2,
+  "output": {
+    "item_ids": [
+      "INV-1007",
+      "INV-1029",
+      "INV-1046",
+      "INV-1063",
+      "INV-1064",
+      "INV-1077",
+      "INV-1078",
+      "INV-1087",
+      "INV-1092",
+      "INV-1096",
+      "INV-1099",
+      "INV-1104",
+      "INV-1111",
+      "INV-1112",
+      "INV-1113",
+      "INV-1114",
+      "INV-1115",
+      "INV-1116",
+      "INV-1117",
+      "INV-1118",
+      "INV-1119",
+      "INV-1120",
+      "INV-1121",
+      "INV-1122",
+      "INV-1123"
+    ],
+    "rationale": [
+      "Key items: Selected all 9 invoices with amounts of at least 2,500,000 cents ($25,000).",
+      "Cutoff window: Selected all 13 invoices dated 2025-12-27 through 2026-01-05, inclusive.",
+      "Credit memo log: Selected all 3 logged invoice IDs that appear in the invoice population."
+    ]
+  },
+  "tokens_in": 4287,
+  "tokens_out": 299,
+  "latency_ms": 5082,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

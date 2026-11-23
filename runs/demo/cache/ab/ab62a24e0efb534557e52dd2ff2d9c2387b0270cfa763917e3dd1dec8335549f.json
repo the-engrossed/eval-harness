@@ -1,0 +1,15 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "prose": "We performed the following procedures: selected items under the stated sampling rule, agreed each invoice to its bill of lading and the bank statement, and tied each invoice to the general ledger. Samples tested: [[item:INV-1011]] ([[ev:ev-INV-1011-invoice_amount]]), [[item:INV-1015]] ([[ev:ev-INV-1015-invoice_amount]]), [[item:INV-1041]] ([[ev:ev-INV-1041-invoice_amount]]), [[item:INV-1063]] ([[ev:ev-INV-1063-invoice_amount]]), [[item:INV-1064]] ([[ev:ev-INV-1064-invoice_amount]]), [[item:INV-1066]] ([[ev:ev-INV-1066-invoice_amount]]), [[item:INV-1071]] ([[ev:ev-INV-1071-invoice_amount]]), [[item:INV-1089]] ([[ev:ev-INV-1089-invoice_amount]]), [[item:INV-1108]] ([[ev:ev-INV-1108-invoice_amount]]), [[item:INV-1115]] ([[ev:ev-INV-1115-invoice_amount]]), [[item:INV-1116]] ([[ev:ev-INV-1116-invoice_amount]]), [[item:INV-1117]] ([[ev:ev-INV-1117-invoice_amount]]), [[item:INV-1118]] ([[ev:ev-INV-1118-invoice_amount]]). Matters noted: amount mismatch on [[item:INV-1011]]; cutoff error on [[item:INV-1115]]; exception on [[item:INV-1064]]. Conclusion: revenue is fairly stated for the items tested, subject to the matters above.",
+    "guard_violations": []
+  },
+  "tokens_in": 6431,
+  "tokens_out": 292,
+  "latency_ms": 54,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

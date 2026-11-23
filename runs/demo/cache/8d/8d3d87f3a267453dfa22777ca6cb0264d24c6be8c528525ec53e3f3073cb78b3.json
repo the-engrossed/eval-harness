@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose describes comparing invoice details with bills of lading, tying invoice totals to the general ledger and subsequent bank deposits, and identifies the samples tested."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 18 sampled invoice IDs are named with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "INV-1103’s lower ledger amount and INV-1072’s partial shipment and missing shipment support are described with the corresponding item markers."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.94,
+        "reason": "A Conclusion sentence is present; it distinguishes the other sixteen samples and requires reconciliation/support before clearing the two flagged matters."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The cited evidence ID resolves to INV-1103’s kept invoice amount field and belongs to that item. The stated amount mismatch and partial-shipment exception match the flagged results; other reported tie-outs are consistent with the outputs."
+      }
+    ]
+  },
+  "tokens_in": 13293,
+  "tokens_out": 823,
+  "latency_ms": 8179,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

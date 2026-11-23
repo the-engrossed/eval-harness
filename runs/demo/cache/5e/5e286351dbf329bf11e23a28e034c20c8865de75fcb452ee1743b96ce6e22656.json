@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose describes comparing invoice totals to the general ledger and bank deposits, and checking invoice dates and quantities against available bills of lading."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled item ID in the run is named with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "INV-1015, INV-1026, and INV-1110 are each identified and their exception or unsupported-recognition outcome is explained."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": false,
+        "confidence": 0.9,
+        "reason": "A Conclusion: sentence is present, but it does not explicitly qualify the overall conclusion as subject to or except for the flagged matters; it only lists follow-up actions."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "Both evidence references resolve to kept fields belonging to the cited items, and the described exceptions match the flagged exceptions and judgment."
+      }
+    ]
+  },
+  "tokens_in": 15340,
+  "tokens_out": 936,
+  "latency_ms": 9771,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

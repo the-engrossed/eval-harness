@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Invoice {{ invoice_id }}</title>
+<style>body{font-family:Georgia,serif;margin:2em}table{border-collapse:collapse}td,th{border:1px solid #999;padding:4px 8px}</style>
+</head>
+<body>
+<section class="page" data-page-no="1">
+  <h1>{{ seller }}</h1>
+  <p>{{ seller_address }}</p>
+  <h2>Invoice {{ invoice_id }}</h2>
+  <p>{{ customer_line }}</p>
+  <p>Bill to: {{ payer }}</p>
+  <p>{{ invoice_date_line }}</p>
+  <p>Terms: {{ terms }}</p>
+  <table>
+    <tr><th>Description</th><th>Quantity</th><th>Unit price</th><th>Amount</th></tr>
+    <tr><td>{{ description }}</td><td>{{ quantity }}</td><td>{{ unit_price }}</td><td>{{ amount }}</td></tr>
+  </table>
+</section>
+<section class="page" data-page-no="2">
+  <h2>Remittance</h2>
+  <p>{{ total_line }}</p>
+  <p>Please quote invoice {{ invoice_id }} with your payment.</p>
+  <p>Pay by transfer to {{ seller }}, {{ bank }}.</p>
+</section>
+</body>
+</html>

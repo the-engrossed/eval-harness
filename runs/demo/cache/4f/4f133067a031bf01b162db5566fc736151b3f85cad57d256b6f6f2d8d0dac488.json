@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 2,
+  "output": {
+    "prose": "Procedures performed: Agreed invoice totals to the general ledger, compared invoiced quantities and dates with bills of lading, and traced invoice totals to subsequent bank deposits where available. Reviewed matching invoice details for possible duplication and compared shipment timing with year-end cut-off.\n\nSamples tested: [[item:INV-1028]], [[item:INV-1029]], [[item:INV-1030]], [[item:INV-1034]], [[item:INV-1047]], [[item:INV-1068]], [[item:INV-1088]], [[item:INV-1110]], [[item:INV-1111]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], and [[item:INV-1117]].\n\nResults: All fifteen invoice totals agreed to the general ledger. For fourteen samples, shipped quantities agreed to invoiced quantities and bank deposits agreed to invoice totals. No customer letter or warehouse note was provided to support a bill-and-hold arrangement.\n\nExceptions: [[item:INV-1030]] is a potential duplicate of [[item:INV-1029]]: the customer, invoice date, product, quantity, and total of [[ev:ev-INV-1030-invoice_amount]] match. Both totals agree to the ledger, but shipment and deposit evidence supports only [[item:INV-1029]]. For [[item:INV-1113]], the invoice total of [[ev:ev-INV-1113-invoice_amount]] agreed to the ledger and subsequent deposit, but the invoice was dated [[ev:ev-INV-1113-invoice_date]] and the goods shipped after year-end on [[ev:ev-INV-1113-ship_date]]. The shipment does not support recognition before year-end. The ledger posting date was not provided, so an actual cut-off misstatement could not be confirmed.\n\nConclusion: No other exceptions were identified in the sample. Investigate whether the potential duplicate represents a separate sale and verify the ledger posting period for the cut-off item before determining whether adjustments are needed.",
+    "guard_violations": []
+  },
+  "tokens_in": 10541,
+  "tokens_out": 473,
+  "latency_ms": 8230,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose says samples were selected, invoices agreed to bills of lading and bank statements, and invoices tied to the general ledger."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every item in the sampled item_ids list appears in the prose with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.93,
+        "reason": "Each flagged item is named with a marker and its matter is stated: missing evidence, duplicate invoice, cutoff error, or exception for the bill-and-hold judgment."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "There is a Conclusion: sentence, and it qualifies the conclusion as subject to the noted matters."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "Every evidence marker resolves to a kept field for the same item, and the stated matters match the flagged exceptions and judgment."
+      }
+    ]
+  },
+  "tokens_in": 16507,
+  "tokens_out": 539,
+  "latency_ms": 6153,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

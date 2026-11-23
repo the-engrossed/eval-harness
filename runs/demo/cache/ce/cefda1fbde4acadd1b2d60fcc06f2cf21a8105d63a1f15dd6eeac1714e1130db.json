@@ -1,0 +1,1936 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "extract_evidence",
+  "run_index": 0,
+  "output": {
+    "fields": [
+      {
+        "item_id": "INV-1007",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-018",
+        "doc_id": "INV-1007-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-018",
+        "evidence_id": "ev-INV-1007-customer_id"
+      },
+      {
+        "item_id": "INV-1007",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-01-18",
+        "doc_id": "INV-1007-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-01-18",
+        "evidence_id": "ev-INV-1007-invoice_date"
+      },
+      {
+        "item_id": "INV-1007",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "44",
+        "doc_id": "INV-1007-invoice",
+        "page_no": 1,
+        "quote": "Stretch wrap roll, 18 in | 44 | $1,853.11 | $81,536.84",
+        "evidence_id": "ev-INV-1007-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1007",
+        "field": "invoice_amount",
+        "value_cents": 8153684,
+        "value_text": null,
+        "doc_id": "INV-1007-invoice",
+        "page_no": 2,
+        "quote": "Total due: $81,536.84",
+        "evidence_id": "ev-INV-1007-invoice_amount"
+      },
+      {
+        "item_id": "INV-1007",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-01-18",
+        "doc_id": "INV-1007-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-01-18",
+        "evidence_id": "ev-INV-1007-ship_date"
+      },
+      {
+        "item_id": "INV-1007",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "44",
+        "doc_id": "INV-1007-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 44",
+        "evidence_id": "ev-INV-1007-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1007",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-02-18",
+        "doc_id": "bank-statement",
+        "page_no": 2,
+        "quote": "2025-02-18 | Millbrook Outfitters | INV-1007 | $81,536.84",
+        "evidence_id": "ev-INV-1007-deposit_date"
+      },
+      {
+        "item_id": "INV-1007",
+        "field": "deposit_amount",
+        "value_cents": 8153684,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 2,
+        "quote": "2025-02-18 | Millbrook Outfitters | INV-1007 | $81,536.84",
+        "evidence_id": "ev-INV-1007-deposit_amount"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-029",
+        "doc_id": "INV-1029-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-029",
+        "evidence_id": "ev-INV-1029-customer_id"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-04-05",
+        "doc_id": "INV-1029-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-04-05",
+        "evidence_id": "ev-INV-1029-invoice_date"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "21",
+        "doc_id": "INV-1029-invoice",
+        "page_no": 1,
+        "quote": "Stretch wrap roll, 18 in | 21 | $3,842.96 | $80,702.16",
+        "evidence_id": "ev-INV-1029-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "invoice_amount",
+        "value_cents": 8070216,
+        "value_text": null,
+        "doc_id": "INV-1029-invoice",
+        "page_no": 2,
+        "quote": "Total due: $80,702.16",
+        "evidence_id": "ev-INV-1029-invoice_amount"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-04-05",
+        "doc_id": "INV-1029-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-04-05",
+        "evidence_id": "ev-INV-1029-ship_date"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "21",
+        "doc_id": "INV-1029-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 21",
+        "evidence_id": "ev-INV-1029-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-05-14",
+        "doc_id": "bank-statement",
+        "page_no": 5,
+        "quote": "2025-05-14 | Copperfield Trading | INV-1029 | $80,702.16",
+        "evidence_id": "ev-INV-1029-deposit_date"
+      },
+      {
+        "item_id": "INV-1029",
+        "field": "deposit_amount",
+        "value_cents": 8070216,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 5,
+        "quote": "2025-05-14 | Copperfield Trading | INV-1029 | $80,702.16",
+        "evidence_id": "ev-INV-1029-deposit_amount"
+      },
+      {
+        "item_id": "INV-1046",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-001",
+        "doc_id": "INV-1046-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-001",
+        "evidence_id": "ev-INV-1046-customer_id"
+      },
+      {
+        "item_id": "INV-1046",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-05-18",
+        "doc_id": "INV-1046-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-05-18",
+        "evidence_id": "ev-INV-1046-invoice_date"
+      },
+      {
+        "item_id": "INV-1046",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "6",
+        "doc_id": "INV-1046-invoice",
+        "page_no": 1,
+        "quote": "Stretch wrap roll, 18 in | 6 | $15,036.01 | $90,216.06",
+        "evidence_id": "ev-INV-1046-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1046",
+        "field": "invoice_amount",
+        "value_cents": 9021606,
+        "value_text": null,
+        "doc_id": "INV-1046-invoice",
+        "page_no": 2,
+        "quote": "Total due: $90,216.06",
+        "evidence_id": "ev-INV-1046-invoice_amount"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-002",
+        "doc_id": "INV-1063-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-002",
+        "evidence_id": "ev-INV-1063-customer_id"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-07-17",
+        "doc_id": "INV-1063-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-07-17",
+        "evidence_id": "ev-INV-1063-invoice_date"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "74",
+        "doc_id": "INV-1063-invoice",
+        "page_no": 1,
+        "quote": "Safety bollard, 42 in | 74 | $1,181.78 | $87,451.72",
+        "evidence_id": "ev-INV-1063-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "invoice_amount",
+        "value_cents": 8745172,
+        "value_text": null,
+        "doc_id": "INV-1063-invoice",
+        "page_no": 2,
+        "quote": "Total due: $87,451.72",
+        "evidence_id": "ev-INV-1063-invoice_amount"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-07-16",
+        "doc_id": "INV-1063-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-07-16",
+        "evidence_id": "ev-INV-1063-ship_date"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "74",
+        "doc_id": "INV-1063-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 74",
+        "evidence_id": "ev-INV-1063-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-08-07",
+        "doc_id": "bank-statement",
+        "page_no": 8,
+        "quote": "2025-08-07 | Tidewell Builders | INV-1063 | $87,451.72",
+        "evidence_id": "ev-INV-1063-deposit_date"
+      },
+      {
+        "item_id": "INV-1063",
+        "field": "deposit_amount",
+        "value_cents": 8745172,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 8,
+        "quote": "2025-08-07 | Tidewell Builders | INV-1063 | $87,451.72",
+        "evidence_id": "ev-INV-1063-deposit_amount"
+      },
+      {
+        "item_id": "INV-1064",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-002",
+        "doc_id": "INV-1064-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-002",
+        "evidence_id": "ev-INV-1064-customer_id"
+      },
+      {
+        "item_id": "INV-1064",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-07-17",
+        "doc_id": "INV-1064-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-07-17",
+        "evidence_id": "ev-INV-1064-invoice_date"
+      },
+      {
+        "item_id": "INV-1064",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "74",
+        "doc_id": "INV-1064-invoice",
+        "page_no": 1,
+        "quote": "Safety bollard, 42 in | 74 | $1,181.78 | $87,451.72",
+        "evidence_id": "ev-INV-1064-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1064",
+        "field": "invoice_amount",
+        "value_cents": 8745172,
+        "value_text": null,
+        "doc_id": "INV-1064-invoice",
+        "page_no": 2,
+        "quote": "Total due: $87,451.72",
+        "evidence_id": "ev-INV-1064-invoice_amount"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-014",
+        "doc_id": "INV-1077-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-014",
+        "evidence_id": "ev-INV-1077-customer_id"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-08-27",
+        "doc_id": "INV-1077-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-08-27",
+        "evidence_id": "ev-INV-1077-invoice_date"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "274",
+        "doc_id": "INV-1077-invoice",
+        "page_no": 1,
+        "quote": "Wire mesh decking panel | 274 | $66.98 | $18,352.52",
+        "evidence_id": "ev-INV-1077-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "invoice_amount",
+        "value_cents": 1835252,
+        "value_text": null,
+        "doc_id": "INV-1077-invoice",
+        "page_no": 2,
+        "quote": "Total due: $18,352.52",
+        "evidence_id": "ev-INV-1077-invoice_amount"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-08-27",
+        "doc_id": "INV-1077-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-08-27",
+        "evidence_id": "ev-INV-1077-ship_date"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "274",
+        "doc_id": "INV-1077-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 274",
+        "evidence_id": "ev-INV-1077-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-09-13",
+        "doc_id": "bank-statement",
+        "page_no": 9,
+        "quote": "2025-09-13 | Kestrel Trading | INV-1077 | $18,352.52",
+        "evidence_id": "ev-INV-1077-deposit_date"
+      },
+      {
+        "item_id": "INV-1077",
+        "field": "deposit_amount",
+        "value_cents": 1835252,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 9,
+        "quote": "2025-09-13 | Kestrel Trading | INV-1077 | $18,352.52",
+        "evidence_id": "ev-INV-1077-deposit_amount"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-009",
+        "doc_id": "INV-1078-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-009",
+        "evidence_id": "ev-INV-1078-customer_id"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-09-01",
+        "doc_id": "INV-1078-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-09-01",
+        "evidence_id": "ev-INV-1078-invoice_date"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "52",
+        "doc_id": "INV-1078-invoice",
+        "page_no": 1,
+        "quote": "Loading dock bumper | 52 | $312.31 | $16,240.12",
+        "evidence_id": "ev-INV-1078-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "invoice_amount",
+        "value_cents": 1624012,
+        "value_text": null,
+        "doc_id": "INV-1078-invoice",
+        "page_no": 2,
+        "quote": "Total due: $16,240.12",
+        "evidence_id": "ev-INV-1078-invoice_amount"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-08-30",
+        "doc_id": "INV-1078-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-08-30",
+        "evidence_id": "ev-INV-1078-ship_date"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "52",
+        "doc_id": "INV-1078-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 52",
+        "evidence_id": "ev-INV-1078-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-10-11",
+        "doc_id": "bank-statement",
+        "page_no": 10,
+        "quote": "2025-10-11 | Ashgrove Trading | INV-1078 | $16,240.12",
+        "evidence_id": "ev-INV-1078-deposit_date"
+      },
+      {
+        "item_id": "INV-1078",
+        "field": "deposit_amount",
+        "value_cents": 1624012,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 10,
+        "quote": "2025-10-11 | Ashgrove Trading | INV-1078 | $16,240.12",
+        "evidence_id": "ev-INV-1078-deposit_amount"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-003",
+        "doc_id": "INV-1087-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-003",
+        "evidence_id": "ev-INV-1087-customer_id"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-10-12",
+        "doc_id": "INV-1087-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-10-12",
+        "evidence_id": "ev-INV-1087-invoice_date"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "227",
+        "doc_id": "INV-1087-invoice",
+        "page_no": 1,
+        "quote": "Safety bollard, 42 in | 227 | $116.67 | $26,484.09",
+        "evidence_id": "ev-INV-1087-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "invoice_amount",
+        "value_cents": 2648409,
+        "value_text": null,
+        "doc_id": "INV-1087-invoice",
+        "page_no": 2,
+        "quote": "Total due: $26,484.09",
+        "evidence_id": "ev-INV-1087-invoice_amount"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-10-12",
+        "doc_id": "INV-1087-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-10-12",
+        "evidence_id": "ev-INV-1087-ship_date"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "227",
+        "doc_id": "INV-1087-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 227",
+        "evidence_id": "ev-INV-1087-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-11-09",
+        "doc_id": "bank-statement",
+        "page_no": 11,
+        "quote": "2025-11-09 | Tidewell Outfitters | INV-1087 | $26,484.09",
+        "evidence_id": "ev-INV-1087-deposit_date"
+      },
+      {
+        "item_id": "INV-1087",
+        "field": "deposit_amount",
+        "value_cents": 2648409,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 11,
+        "quote": "2025-11-09 | Tidewell Outfitters | INV-1087 | $26,484.09",
+        "evidence_id": "ev-INV-1087-deposit_amount"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-013",
+        "doc_id": "INV-1092-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-013",
+        "evidence_id": "ev-INV-1092-customer_id"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-10-19",
+        "doc_id": "INV-1092-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-10-19",
+        "evidence_id": "ev-INV-1092-invoice_date"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "334",
+        "doc_id": "INV-1092-invoice",
+        "page_no": 1,
+        "quote": "Steel pallet racking upright, 12 ft | 334 | $91.34 | $30,507.56",
+        "evidence_id": "ev-INV-1092-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "invoice_amount",
+        "value_cents": 3050756,
+        "value_text": null,
+        "doc_id": "INV-1092-invoice",
+        "page_no": 2,
+        "quote": "Total due: $30,507.56",
+        "evidence_id": "ev-INV-1092-invoice_amount"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-10-18",
+        "doc_id": "INV-1092-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-10-18",
+        "evidence_id": "ev-INV-1092-ship_date"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "334",
+        "doc_id": "INV-1092-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 334",
+        "evidence_id": "ev-INV-1092-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-11-22",
+        "doc_id": "bank-statement",
+        "page_no": 11,
+        "quote": "2025-11-22 | Kestrel Outfitters | INV-1092 | $30,507.56",
+        "evidence_id": "ev-INV-1092-deposit_date"
+      },
+      {
+        "item_id": "INV-1092",
+        "field": "deposit_amount",
+        "value_cents": 3050756,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 11,
+        "quote": "2025-11-22 | Kestrel Outfitters | INV-1092 | $30,507.56",
+        "evidence_id": "ev-INV-1092-deposit_amount"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-025",
+        "doc_id": "INV-1096-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-025",
+        "evidence_id": "ev-INV-1096-customer_id"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-10-30",
+        "doc_id": "INV-1096-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-10-30",
+        "evidence_id": "ev-INV-1096-invoice_date"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "67",
+        "doc_id": "INV-1096-invoice",
+        "page_no": 1,
+        "quote": "Heavy-duty shelving unit | 67 | $217.24 | $14,555.08",
+        "evidence_id": "ev-INV-1096-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "invoice_amount",
+        "value_cents": 1455508,
+        "value_text": null,
+        "doc_id": "INV-1096-invoice",
+        "page_no": 2,
+        "quote": "Total due: $14,555.08",
+        "evidence_id": "ev-INV-1096-invoice_amount"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-10-28",
+        "doc_id": "INV-1096-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-10-28",
+        "evidence_id": "ev-INV-1096-ship_date"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "67",
+        "doc_id": "INV-1096-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 67",
+        "evidence_id": "ev-INV-1096-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-12-05",
+        "doc_id": "bank-statement",
+        "page_no": 12,
+        "quote": "2025-12-05 | Saltmarsh Home Supply | INV-1096 | $14,555.08",
+        "evidence_id": "ev-INV-1096-deposit_date"
+      },
+      {
+        "item_id": "INV-1096",
+        "field": "deposit_amount",
+        "value_cents": 1455508,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 12,
+        "quote": "2025-12-05 | Saltmarsh Home Supply | INV-1096 | $14,555.08",
+        "evidence_id": "ev-INV-1096-deposit_amount"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-003",
+        "doc_id": "INV-1099-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-003",
+        "evidence_id": "ev-INV-1099-customer_id"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-11-14",
+        "doc_id": "INV-1099-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-11-14",
+        "evidence_id": "ev-INV-1099-invoice_date"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "219",
+        "doc_id": "INV-1099-invoice",
+        "page_no": 1,
+        "quote": "Stretch wrap roll, 18 in | 219 | $140.57 | $30,784.83",
+        "evidence_id": "ev-INV-1099-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "invoice_amount",
+        "value_cents": 3078483,
+        "value_text": null,
+        "doc_id": "INV-1099-invoice",
+        "page_no": 2,
+        "quote": "Total due: $30,784.83",
+        "evidence_id": "ev-INV-1099-invoice_amount"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-11-12",
+        "doc_id": "INV-1099-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-11-12",
+        "evidence_id": "ev-INV-1099-ship_date"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "219",
+        "doc_id": "INV-1099-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 219",
+        "evidence_id": "ev-INV-1099-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-11-30",
+        "doc_id": "bank-statement",
+        "page_no": 11,
+        "quote": "2025-11-30 | Tidewell Outfitters | INV-1099 | $30,784.83",
+        "evidence_id": "ev-INV-1099-deposit_date"
+      },
+      {
+        "item_id": "INV-1099",
+        "field": "deposit_amount",
+        "value_cents": 3078483,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 11,
+        "quote": "2025-11-30 | Tidewell Outfitters | INV-1099 | $30,784.83",
+        "evidence_id": "ev-INV-1099-deposit_amount"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-023",
+        "doc_id": "INV-1104-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-023",
+        "evidence_id": "ev-INV-1104-customer_id"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-06",
+        "doc_id": "INV-1104-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-06",
+        "evidence_id": "ev-INV-1104-invoice_date"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "346",
+        "doc_id": "INV-1104-invoice",
+        "page_no": 1,
+        "quote": "Plastic storage bin, large | 346 | $113.49 | $39,267.54",
+        "evidence_id": "ev-INV-1104-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "invoice_amount",
+        "value_cents": 3926754,
+        "value_text": null,
+        "doc_id": "INV-1104-invoice",
+        "page_no": 2,
+        "quote": "Total due: $39,267.54",
+        "evidence_id": "ev-INV-1104-invoice_amount"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2025-12-22",
+        "doc_id": "bank-statement",
+        "page_no": 12,
+        "quote": "2025-12-22 | Saltmarsh Outfitters | INV-1104 | $39,267.54",
+        "evidence_id": "ev-INV-1104-deposit_date"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "deposit_amount",
+        "value_cents": 3926754,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 12,
+        "quote": "2025-12-22 | Saltmarsh Outfitters | INV-1104 | $39,267.54",
+        "evidence_id": "ev-INV-1104-deposit_amount"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "hold_until_date",
+        "value_cents": null,
+        "value_text": "2026-01-11",
+        "doc_id": "INV-1104-hold-letter",
+        "page_no": 1,
+        "quote": "Please keep these goods at your warehouse until 2026-01-11.",
+        "evidence_id": "ev-INV-1104-hold_until_date"
+      },
+      {
+        "item_id": "INV-1104",
+        "field": "segregated_quantity",
+        "value_cents": null,
+        "value_text": "346",
+        "doc_id": "INV-1104-warehouse-note",
+        "page_no": 1,
+        "quote": "Units segregated: 346",
+        "evidence_id": "ev-INV-1104-segregated_quantity"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-029",
+        "doc_id": "INV-1111-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-029",
+        "evidence_id": "ev-INV-1111-customer_id"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-28",
+        "doc_id": "INV-1111-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-28",
+        "evidence_id": "ev-INV-1111-invoice_date"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "310",
+        "doc_id": "INV-1111-invoice",
+        "page_no": 1,
+        "quote": "Industrial hand truck | 310 | $19.95 | $6,184.50",
+        "evidence_id": "ev-INV-1111-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "invoice_amount",
+        "value_cents": 618450,
+        "value_text": null,
+        "doc_id": "INV-1111-invoice",
+        "page_no": 2,
+        "quote": "Total due: $6,184.50",
+        "evidence_id": "ev-INV-1111-invoice_amount"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-26",
+        "doc_id": "INV-1111-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-26",
+        "evidence_id": "ev-INV-1111-ship_date"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "310",
+        "doc_id": "INV-1111-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 310",
+        "evidence_id": "ev-INV-1111-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-01-23",
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-23 | Copperfield Trading | INV-1111 | $6,184.50",
+        "evidence_id": "ev-INV-1111-deposit_date"
+      },
+      {
+        "item_id": "INV-1111",
+        "field": "deposit_amount",
+        "value_cents": 618450,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-23 | Copperfield Trading | INV-1111 | $6,184.50",
+        "evidence_id": "ev-INV-1111-deposit_amount"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-015",
+        "doc_id": "INV-1112-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-015",
+        "evidence_id": "ev-INV-1112-customer_id"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-28",
+        "doc_id": "INV-1112-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-28",
+        "evidence_id": "ev-INV-1112-invoice_date"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "153",
+        "doc_id": "INV-1112-invoice",
+        "page_no": 1,
+        "quote": "Steel pallet racking upright, 12 ft | 153 | $64.72 | $9,902.16",
+        "evidence_id": "ev-INV-1112-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "invoice_amount",
+        "value_cents": 990216,
+        "value_text": null,
+        "doc_id": "INV-1112-invoice",
+        "page_no": 2,
+        "quote": "Total due: $9,902.16",
+        "evidence_id": "ev-INV-1112-invoice_amount"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-28",
+        "doc_id": "INV-1112-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-28",
+        "evidence_id": "ev-INV-1112-ship_date"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "153",
+        "doc_id": "INV-1112-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 153",
+        "evidence_id": "ev-INV-1112-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-01-22",
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-22 | Kestrel Home Supply | INV-1112 | $9,902.16",
+        "evidence_id": "ev-INV-1112-deposit_date"
+      },
+      {
+        "item_id": "INV-1112",
+        "field": "deposit_amount",
+        "value_cents": 990216,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-22 | Kestrel Home Supply | INV-1112 | $9,902.16",
+        "evidence_id": "ev-INV-1112-deposit_amount"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-007",
+        "doc_id": "INV-1113-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-007",
+        "evidence_id": "ev-INV-1113-customer_id"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-29",
+        "doc_id": "INV-1113-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-29",
+        "evidence_id": "ev-INV-1113-invoice_date"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "383",
+        "doc_id": "INV-1113-invoice",
+        "page_no": 1,
+        "quote": "Steel pallet racking upright, 12 ft | 383 | $53.56 | $20,513.48",
+        "evidence_id": "ev-INV-1113-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "invoice_amount",
+        "value_cents": 2051348,
+        "value_text": null,
+        "doc_id": "INV-1113-invoice",
+        "page_no": 2,
+        "quote": "Total due: $20,513.48",
+        "evidence_id": "ev-INV-1113-invoice_amount"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-27",
+        "doc_id": "INV-1113-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-27",
+        "evidence_id": "ev-INV-1113-ship_date"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "383",
+        "doc_id": "INV-1113-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 383",
+        "evidence_id": "ev-INV-1113-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-01-27",
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-27 | Ashgrove Builders | INV-1113 | $20,513.48",
+        "evidence_id": "ev-INV-1113-deposit_date"
+      },
+      {
+        "item_id": "INV-1113",
+        "field": "deposit_amount",
+        "value_cents": 2051348,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-27 | Ashgrove Builders | INV-1113 | $20,513.48",
+        "evidence_id": "ev-INV-1113-deposit_amount"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-009",
+        "doc_id": "INV-1114-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-009",
+        "evidence_id": "ev-INV-1114-customer_id"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-29",
+        "doc_id": "INV-1114-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-29",
+        "evidence_id": "ev-INV-1114-invoice_date"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "144",
+        "doc_id": "INV-1114-invoice",
+        "page_no": 1,
+        "quote": "Plastic storage bin, large | 144 | $105.98 | $15,261.12",
+        "evidence_id": "ev-INV-1114-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "invoice_amount",
+        "value_cents": 1526112,
+        "value_text": null,
+        "doc_id": "INV-1114-invoice",
+        "page_no": 2,
+        "quote": "Total due: $15,261.12",
+        "evidence_id": "ev-INV-1114-invoice_amount"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-27",
+        "doc_id": "INV-1114-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-27",
+        "evidence_id": "ev-INV-1114-ship_date"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "144",
+        "doc_id": "INV-1114-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 144",
+        "evidence_id": "ev-INV-1114-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-02-16",
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-16 | Ashgrove Trading | INV-1114 | $15,261.12",
+        "evidence_id": "ev-INV-1114-deposit_date"
+      },
+      {
+        "item_id": "INV-1114",
+        "field": "deposit_amount",
+        "value_cents": 1526112,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-16 | Ashgrove Trading | INV-1114 | $15,261.12",
+        "evidence_id": "ev-INV-1114-deposit_amount"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-003",
+        "doc_id": "INV-1115-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-003",
+        "evidence_id": "ev-INV-1115-customer_id"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-29",
+        "doc_id": "INV-1115-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-29",
+        "evidence_id": "ev-INV-1115-invoice_date"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "399",
+        "doc_id": "INV-1115-invoice",
+        "page_no": 1,
+        "quote": "Stretch wrap roll, 18 in | 399 | $35.31 | $14,088.69",
+        "evidence_id": "ev-INV-1115-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "invoice_amount",
+        "value_cents": 1408869,
+        "value_text": null,
+        "doc_id": "INV-1115-invoice",
+        "page_no": 2,
+        "quote": "Total due: $14,088.69",
+        "evidence_id": "ev-INV-1115-invoice_amount"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-28",
+        "doc_id": "INV-1115-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-28",
+        "evidence_id": "ev-INV-1115-ship_date"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "399",
+        "doc_id": "INV-1115-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 399",
+        "evidence_id": "ev-INV-1115-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-02-05",
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-05 | Tidewell Outfitters | INV-1115 | $14,088.69",
+        "evidence_id": "ev-INV-1115-deposit_date"
+      },
+      {
+        "item_id": "INV-1115",
+        "field": "deposit_amount",
+        "value_cents": 1408869,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-05 | Tidewell Outfitters | INV-1115 | $14,088.69",
+        "evidence_id": "ev-INV-1115-deposit_amount"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-017",
+        "doc_id": "INV-1116-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-017",
+        "evidence_id": "ev-INV-1116-customer_id"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-29",
+        "doc_id": "INV-1116-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-29",
+        "evidence_id": "ev-INV-1116-invoice_date"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "75",
+        "doc_id": "INV-1116-invoice",
+        "page_no": 1,
+        "quote": "Loading dock bumper | 75 | $62.29 | $4,671.75",
+        "evidence_id": "ev-INV-1116-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "invoice_amount",
+        "value_cents": 467175,
+        "value_text": null,
+        "doc_id": "INV-1116-invoice",
+        "page_no": 2,
+        "quote": "Total due: $4,671.75",
+        "evidence_id": "ev-INV-1116-invoice_amount"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-29",
+        "doc_id": "INV-1116-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-29",
+        "evidence_id": "ev-INV-1116-ship_date"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "75",
+        "doc_id": "INV-1116-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 75",
+        "evidence_id": "ev-INV-1116-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-01-09",
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-09 | Millbrook Builders | INV-1116 | $4,671.75",
+        "evidence_id": "ev-INV-1116-deposit_date"
+      },
+      {
+        "item_id": "INV-1116",
+        "field": "deposit_amount",
+        "value_cents": 467175,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-09 | Millbrook Builders | INV-1116 | $4,671.75",
+        "evidence_id": "ev-INV-1116-deposit_amount"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-002",
+        "doc_id": "INV-1117-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-002",
+        "evidence_id": "ev-INV-1117-customer_id"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-30",
+        "doc_id": "INV-1117-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-30",
+        "evidence_id": "ev-INV-1117-invoice_date"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "365",
+        "doc_id": "INV-1117-invoice",
+        "page_no": 1,
+        "quote": "Wire mesh decking panel | 365 | $18.97 | $6,924.05",
+        "evidence_id": "ev-INV-1117-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "invoice_amount",
+        "value_cents": 692405,
+        "value_text": null,
+        "doc_id": "INV-1117-invoice",
+        "page_no": 2,
+        "quote": "Total due: $6,924.05",
+        "evidence_id": "ev-INV-1117-invoice_amount"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2026-01-03",
+        "doc_id": "INV-1117-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2026-01-03",
+        "evidence_id": "ev-INV-1117-ship_date"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "365",
+        "doc_id": "INV-1117-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 365",
+        "evidence_id": "ev-INV-1117-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-01-24",
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-24 | Tidewell Builders | INV-1117 | $6,924.05",
+        "evidence_id": "ev-INV-1117-deposit_date"
+      },
+      {
+        "item_id": "INV-1117",
+        "field": "deposit_amount",
+        "value_cents": 692405,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-24 | Tidewell Builders | INV-1117 | $6,924.05",
+        "evidence_id": "ev-INV-1117-deposit_amount"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-018",
+        "doc_id": "INV-1118-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-018",
+        "evidence_id": "ev-INV-1118-customer_id"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-30",
+        "doc_id": "INV-1118-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-30",
+        "evidence_id": "ev-INV-1118-invoice_date"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "169",
+        "doc_id": "INV-1118-invoice",
+        "page_no": 1,
+        "quote": "Heavy-duty shelving unit | 169 | $54.01 | $9,127.69",
+        "evidence_id": "ev-INV-1118-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "invoice_amount",
+        "value_cents": 912769,
+        "value_text": null,
+        "doc_id": "INV-1118-invoice",
+        "page_no": 2,
+        "quote": "Total due: $9,127.69",
+        "evidence_id": "ev-INV-1118-invoice_amount"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-30",
+        "doc_id": "INV-1118-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-30",
+        "evidence_id": "ev-INV-1118-ship_date"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "169",
+        "doc_id": "INV-1118-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 169",
+        "evidence_id": "ev-INV-1118-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-01-30",
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-30 | Millbrook Outfitters | INV-1118 | $9,127.69",
+        "evidence_id": "ev-INV-1118-deposit_date"
+      },
+      {
+        "item_id": "INV-1118",
+        "field": "deposit_amount",
+        "value_cents": 912769,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 13,
+        "quote": "2026-01-30 | Millbrook Outfitters | INV-1118 | $9,127.69",
+        "evidence_id": "ev-INV-1118-deposit_amount"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-002",
+        "doc_id": "INV-1119-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-002",
+        "evidence_id": "ev-INV-1119-customer_id"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2025-12-31",
+        "doc_id": "INV-1119-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2025-12-31",
+        "evidence_id": "ev-INV-1119-invoice_date"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "252",
+        "doc_id": "INV-1119-invoice",
+        "page_no": 1,
+        "quote": "Wire mesh decking panel | 252 | $29.62 | $7,464.24",
+        "evidence_id": "ev-INV-1119-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "invoice_amount",
+        "value_cents": 746424,
+        "value_text": null,
+        "doc_id": "INV-1119-invoice",
+        "page_no": 2,
+        "quote": "Total due: $7,464.24",
+        "evidence_id": "ev-INV-1119-invoice_amount"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2025-12-31",
+        "doc_id": "INV-1119-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2025-12-31",
+        "evidence_id": "ev-INV-1119-ship_date"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "252",
+        "doc_id": "INV-1119-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 252",
+        "evidence_id": "ev-INV-1119-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-02-15",
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-15 | Tidewell Builders | INV-1119 | $7,464.24",
+        "evidence_id": "ev-INV-1119-deposit_date"
+      },
+      {
+        "item_id": "INV-1119",
+        "field": "deposit_amount",
+        "value_cents": 746424,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-15 | Tidewell Builders | INV-1119 | $7,464.24",
+        "evidence_id": "ev-INV-1119-deposit_amount"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-019",
+        "doc_id": "INV-1120-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-019",
+        "evidence_id": "ev-INV-1120-customer_id"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2026-01-02",
+        "doc_id": "INV-1120-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2026-01-02",
+        "evidence_id": "ev-INV-1120-invoice_date"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "2",
+        "doc_id": "INV-1120-invoice",
+        "page_no": 1,
+        "quote": "Steel pallet racking upright, 12 ft | 2 | $9,859.49 | $19,718.98",
+        "evidence_id": "ev-INV-1120-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "invoice_amount",
+        "value_cents": 1971898,
+        "value_text": null,
+        "doc_id": "INV-1120-invoice",
+        "page_no": 2,
+        "quote": "Total due: $19,718.98",
+        "evidence_id": "ev-INV-1120-invoice_amount"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2026-01-02",
+        "doc_id": "INV-1120-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2026-01-02",
+        "evidence_id": "ev-INV-1120-ship_date"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "2",
+        "doc_id": "INV-1120-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 2",
+        "evidence_id": "ev-INV-1120-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-02-22",
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-22 | Millbrook Trading | INV-1120 | $19,718.98",
+        "evidence_id": "ev-INV-1120-deposit_date"
+      },
+      {
+        "item_id": "INV-1120",
+        "field": "deposit_amount",
+        "value_cents": 1971898,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-22 | Millbrook Trading | INV-1120 | $19,718.98",
+        "evidence_id": "ev-INV-1120-deposit_amount"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-020",
+        "doc_id": "INV-1121-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-020",
+        "evidence_id": "ev-INV-1121-customer_id"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2026-01-04",
+        "doc_id": "INV-1121-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2026-01-04",
+        "evidence_id": "ev-INV-1121-invoice_date"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "107",
+        "doc_id": "INV-1121-invoice",
+        "page_no": 1,
+        "quote": "Plastic storage bin, large | 107 | $42.15 | $4,510.05",
+        "evidence_id": "ev-INV-1121-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "invoice_amount",
+        "value_cents": 451005,
+        "value_text": null,
+        "doc_id": "INV-1121-invoice",
+        "page_no": 2,
+        "quote": "Total due: $4,510.05",
+        "evidence_id": "ev-INV-1121-invoice_amount"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2026-01-02",
+        "doc_id": "INV-1121-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2026-01-02",
+        "evidence_id": "ev-INV-1121-ship_date"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "107",
+        "doc_id": "INV-1121-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 107",
+        "evidence_id": "ev-INV-1121-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-02-19",
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-19 | Millbrook Home Supply | INV-1121 | $4,510.05",
+        "evidence_id": "ev-INV-1121-deposit_date"
+      },
+      {
+        "item_id": "INV-1121",
+        "field": "deposit_amount",
+        "value_cents": 451005,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-19 | Millbrook Home Supply | INV-1121 | $4,510.05",
+        "evidence_id": "ev-INV-1121-deposit_amount"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-030",
+        "doc_id": "INV-1122-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-030",
+        "evidence_id": "ev-INV-1122-customer_id"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2026-01-05",
+        "doc_id": "INV-1122-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2026-01-05",
+        "evidence_id": "ev-INV-1122-invoice_date"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "241",
+        "doc_id": "INV-1122-invoice",
+        "page_no": 1,
+        "quote": "Steel pallet racking upright, 12 ft | 241 | $77.56 | $18,691.96",
+        "evidence_id": "ev-INV-1122-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "invoice_amount",
+        "value_cents": 1869196,
+        "value_text": null,
+        "doc_id": "INV-1122-invoice",
+        "page_no": 2,
+        "quote": "Total due: $18,691.96",
+        "evidence_id": "ev-INV-1122-invoice_amount"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2026-01-03",
+        "doc_id": "INV-1122-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2026-01-03",
+        "evidence_id": "ev-INV-1122-ship_date"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "241",
+        "doc_id": "INV-1122-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 241",
+        "evidence_id": "ev-INV-1122-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-02-01",
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-01 | Copperfield Home Supply | INV-1122 | $18,691.96",
+        "evidence_id": "ev-INV-1122-deposit_date"
+      },
+      {
+        "item_id": "INV-1122",
+        "field": "deposit_amount",
+        "value_cents": 1869196,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-01 | Copperfield Home Supply | INV-1122 | $18,691.96",
+        "evidence_id": "ev-INV-1122-deposit_amount"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "customer_id",
+        "value_cents": null,
+        "value_text": "C-003",
+        "doc_id": "INV-1123-invoice",
+        "page_no": 1,
+        "quote": "Customer ID: C-003",
+        "evidence_id": "ev-INV-1123-customer_id"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "invoice_date",
+        "value_cents": null,
+        "value_text": "2026-01-05",
+        "doc_id": "INV-1123-invoice",
+        "page_no": 1,
+        "quote": "Invoice date: 2026-01-05",
+        "evidence_id": "ev-INV-1123-invoice_date"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "invoice_quantity",
+        "value_cents": null,
+        "value_text": "306",
+        "doc_id": "INV-1123-invoice",
+        "page_no": 1,
+        "quote": "Heavy-duty shelving unit | 306 | $5.88 | $1,799.28",
+        "evidence_id": "ev-INV-1123-invoice_quantity"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "invoice_amount",
+        "value_cents": 179928,
+        "value_text": null,
+        "doc_id": "INV-1123-invoice",
+        "page_no": 2,
+        "quote": "Total due: $1,799.28",
+        "evidence_id": "ev-INV-1123-invoice_amount"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "ship_date",
+        "value_cents": null,
+        "value_text": "2026-01-04",
+        "doc_id": "INV-1123-bol",
+        "page_no": 1,
+        "quote": "Ship date: 2026-01-04",
+        "evidence_id": "ev-INV-1123-ship_date"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "quantity_shipped",
+        "value_cents": null,
+        "value_text": "306",
+        "doc_id": "INV-1123-bol",
+        "page_no": 1,
+        "quote": "Quantity shipped: 306",
+        "evidence_id": "ev-INV-1123-quantity_shipped"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "deposit_date",
+        "value_cents": null,
+        "value_text": "2026-02-15",
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-15 | Tidewell Outfitters | INV-1123 | $1,799.28",
+        "evidence_id": "ev-INV-1123-deposit_date"
+      },
+      {
+        "item_id": "INV-1123",
+        "field": "deposit_amount",
+        "value_cents": 179928,
+        "value_text": null,
+        "doc_id": "bank-statement",
+        "page_no": 14,
+        "quote": "2026-02-15 | Tidewell Outfitters | INV-1123 | $1,799.28",
+        "evidence_id": "ev-INV-1123-deposit_amount"
+      }
+    ],
+    "dropped": []
+  },
+  "tokens_in": 7326,
+  "tokens_out": 10263,
+  "latency_ms": 553,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

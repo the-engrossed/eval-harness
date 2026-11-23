@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose says samples were selected, invoices agreed to bills of lading and bank statements, and invoices tied to the general ledger."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled item ID in the provided item list is named with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.93,
+        "reason": "The prose identifies the amount mismatch for INV-1103 and the exception outcome for INV-1072, covering both flagged matters."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "There is a Conclusion sentence, and it is qualified with “subject to the matters above.”"
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "All evidence references resolve to kept fields belonging to the paired items, and both prose exceptions match flagged matters."
+      }
+    ]
+  },
+  "tokens_in": 12443,
+  "tokens_out": 417,
+  "latency_ms": 4434,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

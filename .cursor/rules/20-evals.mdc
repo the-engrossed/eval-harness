@@ -1,0 +1,58 @@
+---
+description: Rules for data generation, scorers, runner, gate, feedback loop and scorecard.
+globs: data/**, evals/**, feedback/**, report/**, config/gate.toml
+alwaysApply: false
+---
+
+# Data, evals, gate, feedback, scorecard
+
+## Synthetic engagement (SPEC.md §4)
+- `data/generate.py` is seeded and deterministic: same seed, byte-identical output.
+- Every planted exception sits inside the required sample set, so a miss can be traced
+  to the step that caused it.
+- The generator asserts every answer-key quote is an exact substring of its page before
+  writing. A failed assertion stops generation.
+
+## Scorers (SPEC.md §9)
+- One scorer module per node. Each returns `StepScore` records keyed by
+  (case_id, run_index, node, metric) with `kind` (outcome|process), `value`, `passed`,
+  `critical`, `failure_origin` (agent|infra|data, on failures), `detail`, and `trace_ref`.
+  A score without a `trace_ref` is a bug. Only `agent` failures count toward accuracy.
+- Deterministic scorers compare against the answer key only. They never call a model.
+- The LLM judge scores `draft_workpaper` against a written rubric with named criteria,
+  returns per-criterion pass/fail, a `confidence` (0–1) and a short reason, and is itself versioned
+  (`evals/scorers/judge_prompts/<version>.md`). Judge model is configured separately
+  from the model under test.
+- Judgment cases (SPEC.md §4.4) are scored against `allowed_outcomes` and rubric, never
+  against a single label.
+
+## Runner (SPEC.md §10)
+- Runs every case N times per model config. Records accuracy, consistency, latency and
+  cost per workpaper. Writes `runs/<run_id>/results.jsonl`, `summary.json`, `spans.jsonl`,
+  and appends one line to `runs/history.jsonl`.
+- Consistency is reported two ways: pass^N (case passes in all N runs) and outcome
+  agreement (share of runs matching the modal exception set).
+- A run is reproducible from its `manifest.json` (git sha, seeds, model configs, prompt
+  versions, judge version, suite hash).
+
+## Gate (SPEC.md §11)
+- Pure function: (candidate summary, baseline summary, gate config) → `GateResult`.
+- Compare per-case paired deltas with a seeded bootstrap CI (SPEC.md §11.1), never two
+  unpaired averages. A drop the CI can't confirm is `NEEDS_REVIEW`, not `DO_NOT_SHIP`.
+- No judge panels or majority votes across judges (SPEC.md §9.6).
+- Fails if any critical metric drops more than its margin, or if any planted exception is
+  missed in any run. Output names the step, metric, baseline → candidate value, the case
+  ids, and trace refs. CLI exits 1 on fail.
+- The gate never edits a baseline.
+
+## Feedback loop (SPEC.md §12)
+- A rejection needs: trace ref, node, reviewer, reason, and the corrected expected
+  outcome. A reason alone is not ground truth; reject the record if the correction is
+  missing.
+- The new case goes to `evals/suites/from_feedback/`, keeps provenance (trace ref,
+  reviewer, reason, created_at), is marked critical, and is included in the next run.
+
+## Scorecard (SPEC.md §13)
+- One static HTML file, `out/scorecard.html`, from a Jinja2 template. Inline CSS and SVG
+  only. No JavaScript required to read it.
+- Every number comes from `runs/`. Simulated runs show a SIMULATED badge.

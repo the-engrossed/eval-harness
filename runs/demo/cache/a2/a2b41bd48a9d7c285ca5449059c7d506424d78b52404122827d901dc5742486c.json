@@ -1,0 +1,48 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 2,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1046",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "The invoice ties to the GL, but no bill of lading or bank deposit references it."
+      },
+      {
+        "item_id": "INV-1064",
+        "type": "DUPLICATE_INVOICE",
+        "rationale": "Potential duplicate of INV-1063: both invoices bill customer C-002 on July 17, 2025 for 74 safety bollards at $87,451.72. Only INV-1063 has shipment and deposit support."
+      },
+      {
+        "item_id": "INV-1064",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "No bill of lading or bank deposit separately references INV-1064."
+      },
+      {
+        "item_id": "INV-1104",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "No bill of lading was found, and the hold letter and warehouse note do not establish that control transferred by year-end."
+      },
+      {
+        "item_id": "INV-1117",
+        "type": "CUTOFF_ERROR",
+        "rationale": "The December 30, 2025 invoice ties to the GL, but the bill of lading shows all 365 units shipped on January 3, 2026. The shipment evidence does not support recognition in fiscal 2025."
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1104",
+        "type": "BILL_AND_HOLD",
+        "outcome": "exception",
+        "rationale": "The customer letter requests a hold through January 11, 2026, and the warehouse note confirms segregation of all 346 invoiced units. The documents do not establish a substantive reason for the hold, that the goods were ready for transfer by December 31, or that the seller could not redirect them. The matching December 22 deposit does not establish transfer of control."
+      }
+    ]
+  },
+  "tokens_in": 17033,
+  "tokens_out": 530,
+  "latency_ms": 9407,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

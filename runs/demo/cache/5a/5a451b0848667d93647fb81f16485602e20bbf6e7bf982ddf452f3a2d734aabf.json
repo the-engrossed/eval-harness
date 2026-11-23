@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "prose": "Procedures performed: Compared invoice totals with general ledger amounts and subsequent bank deposits. Compared billed quantities and invoice dates with quantities and shipment dates shown on bills of lading to assess shipment support and year-end cutoff.\n\nSamples tested: Thirteen invoices: [[item:INV-1011]], [[item:INV-1015]], [[item:INV-1041]], [[item:INV-1063]], [[item:INV-1064]], [[item:INV-1066]], [[item:INV-1071]], [[item:INV-1089]], [[item:INV-1108]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], and [[item:INV-1118]].\n\nResults: All invoice totals agreed to subsequent bank deposits. All but one agreed to the general ledger. Billed and shipped quantities agreed except for the partial shipment noted below. No customer letter or warehouse note was provided to substantiate any hold or inventory segregation.\n\nExceptions:\n- [[item:INV-1011]]: The general ledger amount was lower than the invoice total [[ev:ev-INV-1011-invoice_amount]], which agreed to the bank deposit [[ev:ev-INV-1011-deposit_amount]].\n- [[item:INV-1064]]: The bill of lading supports only part of the billed quantity. The deposit covered the full invoice, but no shipment evidence supported the remaining units.\n- [[item:INV-1115]]: The invoice date [[ev:ev-INV-1115-invoice_date]] preceded year-end, but the ship date [[ev:ev-INV-1115-ship_date]] followed year-end. The shipment does not support recognition before year-end. The ledger posting date was not provided, so an actual cutoff misstatement could not be confirmed.\n\nConclusion: No other exceptions were identified in the sample. Follow up on the ledger discrepancy, obtain shipment support for the remaining units, and verify the posting period for the cutoff item before concluding on the exceptions.",
+    "guard_violations": []
+  },
+  "tokens_in": 9375,
+  "tokens_out": 449,
+  "latency_ms": 8497,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

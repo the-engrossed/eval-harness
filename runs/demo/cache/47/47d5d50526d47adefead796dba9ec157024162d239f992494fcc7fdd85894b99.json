@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 1,
+  "output": {
+    "prose": "Procedures performed: Agreed sampled invoice totals to the general ledger and traced them to bank deposits where available. Compared invoice dates and quantities with bills of lading, reviewed shipment timing around year-end, and evaluated the flagged duplicate and bill-and-hold evidence.\n\nSamples tested: Twenty-five invoices: [[item:INV-1007]], [[item:INV-1029]], [[item:INV-1046]], [[item:INV-1063]], [[item:INV-1064]], [[item:INV-1077]], [[item:INV-1078]], [[item:INV-1087]], [[item:INV-1092]], [[item:INV-1096]], [[item:INV-1099]], [[item:INV-1104]], [[item:INV-1111]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], [[item:INV-1119]], [[item:INV-1120]], [[item:INV-1121]], [[item:INV-1122]], and [[item:INV-1123]].\n\nResults: All invoice totals agreed to the general ledger. All twenty-three available deposits matched invoice totals, and all twenty-two available bills of lading matched invoiced quantities. No exceptions were noted beyond those below.\n\nExceptions:\n- [[item:INV-1046]]: The invoiced amount of [[ev:ev-INV-1046-invoice_amount]] agreed to the ledger, but no bill of lading or bank deposit was identified.\n- [[item:INV-1064]]: Potential duplicate of [[item:INV-1063]]. Both were recorded in the ledger and match on customer, invoice date, product, quantity, and amount. Only [[item:INV-1063]] had shipment and deposit support.\n- [[item:INV-1104]]: No bill of lading was available. The customer requested a hold until [[ev:ev-INV-1104-hold_until_date]], the warehouse note documented segregation of all invoiced units, and the deposit matched the invoice. The evidence did not establish a substantive reason for the hold, readiness for transfer by year-end, or that the seller could not use or redirect the goods. Year-end recognition was not supported.\n- [[item:INV-1117]]: The invoice was dated [[ev:ev-INV-1117-invoice_date]], but all units shipped on [[ev:ev-INV-1117-ship_date]], after year-end. Shipment supports recognition in the following period. The ledger tie-out confirms the amount, not the posting period; verify that period before concluding whether an adjustment is needed.\n\nConclusion: The amount tie-outs showed no differences where evidence was available. The sample did not fully support revenue occurrence and cutoff. Obtain alternative support for the unsupported sale, investigate the potential duplicate, obtain the missing bill-and-hold support, and verify the cutoff item's ledger posting period before concluding on misstatement.",
+    "guard_violations": []
+  },
+  "tokens_in": 17382,
+  "tokens_out": 678,
+  "latency_ms": 10977,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

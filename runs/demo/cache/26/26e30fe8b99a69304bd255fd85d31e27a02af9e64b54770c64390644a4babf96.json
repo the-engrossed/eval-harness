@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.88,
+        "reason": "The prose describes samples tested, invoice-to-GL and invoice-to-bank-deposit comparisons, billed quantities compared with bills of lading, and cutoff review."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled invoice ID in the item list appears with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose identifies INV-1011's ledger shortfall, INV-1064's partial shipment, and INV-1115's cutoff issue, each with its item marker and outcome."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "A Conclusion: sentence is present and is qualified by required reconciliation and verification before concluding on revenue."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "All cited evidence IDs are kept fields for the referenced items, and the described exceptions agree with the flagged exceptions and judgment."
+      }
+    ]
+  },
+  "tokens_in": 10010,
+  "tokens_out": 690,
+  "latency_ms": 7553,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

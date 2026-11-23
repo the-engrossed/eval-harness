@@ -1,0 +1,31 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 0,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1030",
+        "type": "DUPLICATE_INVOICE",
+        "rationale": "Both invoices tie to the GL and bill customer C-027 on 2025-04-06 for 243 heavy-duty shelving units totaling $31,172.04. Only INV-1029 has separate shipment and deposit support."
+      },
+      {
+        "item_id": "INV-1030",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "No bill of lading or supplied bank statement entry references INV-1030."
+      },
+      {
+        "item_id": "INV-1113",
+        "type": "CUTOFF_ERROR",
+        "rationale": "The invoice is dated 2025-12-30, but the bill of lading shows all 246 units shipped on 2026-01-03. The $12,004.80 is not supported as FY2025 revenue; the GL posting date was not supplied."
+      }
+    ],
+    "judgments": []
+  },
+  "tokens_in": 10451,
+  "tokens_out": 238,
+  "latency_ms": 4949,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

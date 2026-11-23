@@ -1,0 +1,60 @@
+[project]
+name = "auditlab"
+version = "0.1.0"
+description = "Model-swap eval pipeline for an audit revenue-testing agent."
+requires-python = ">=3.12"
+dependencies = [
+    "pydantic>=2.9,<3",
+    "langgraph>=0.2",
+    "jinja2>=3.1,<4",
+    "beautifulsoup4>=4.12,<5",
+    "opentelemetry-api>=1.27,<2",
+    "opentelemetry-sdk>=1.27,<2",
+    "python-dotenv>=1.0,<2",
+]
+
+[project.optional-dependencies]
+openai = ["openai>=1.50"]
+anthropic = ["anthropic>=0.40"]
+gemini = ["google-genai>=1.0"]
+langsmith = ["langsmith>=0.2"]
+langfuse = ["langfuse>=2.0"]
+otlp = ["opentelemetry-exporter-otlp>=1.27,<2"]
+dev = [
+    "pytest>=8.3,<9",
+    "ruff>=0.6,<1",
+    "mypy>=1.11,<2",
+]
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["auditlab"]
+
+[tool.ruff]
+line-length = 100
+target-version = "py312"
+
+[tool.ruff.lint]
+select = ["E", "F", "I", "UP", "B", "SIM", "ANN"]
+ignore = ["ANN401"]
+
+[tool.ruff.lint.per-file-ignores]
+"tests/*" = ["ANN"]
+
+[tool.mypy]
+python_version = "3.12"
+strict = true
+plugins = ["pydantic.mypy"]
+exclude = "^build/"
+
+[[tool.mypy.overrides]]
+module = ["bs4.*"]
+ignore_missing_imports = true
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+pythonpath = ["."]
+addopts = "-q"

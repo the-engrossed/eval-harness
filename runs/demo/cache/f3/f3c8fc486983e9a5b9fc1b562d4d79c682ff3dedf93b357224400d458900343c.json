@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose states that samples were selected, invoices were agreed to bills of lading and bank statements, and invoices were tied to the general ledger."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 15 sampled invoice IDs appear with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "Both flagged exceptions are identified by item marker and type: duplicate invoice for INV-1030 and cutoff error for INV-1113."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "There is a Conclusion: sentence, and it qualifies the conclusion as subject to the matters noted."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "Every cited evidence ID is present and belongs to its paired item; both prose exceptions match the flagged exceptions."
+      }
+    ]
+  },
+  "tokens_in": 10150,
+  "tokens_out": 443,
+  "latency_ms": 6256,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

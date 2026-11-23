@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.89,
+        "reason": "The prose describes testing invoices against the GL, deposits, and bills of lading, and lists the samples tested."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 25 sampled invoice IDs are named with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "Each flagged exception and the bill-and-hold judgment outcome are described with the relevant item markers."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.78,
+        "reason": "A Conclusion: section is present. It identifies the unaffected items and says further support and evaluation are needed before concluding, qualifying the overall result in light of the flagged matters."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The cited evidence IDs resolve to kept fields for the stated items, and the claimed exceptions align with the flagged exceptions and judgment."
+      }
+    ]
+  },
+  "tokens_in": 18129,
+  "tokens_out": 965,
+  "latency_ms": 9173,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

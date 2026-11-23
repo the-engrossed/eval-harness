@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 1,
+  "output": {
+    "prose": "Procedures performed: Compared invoice totals with general ledger postings and subsequent bank deposits. Compared billed quantities and invoice dates with quantities and shipment dates on bills of lading and reviewed timing around year-end.\n\nSamples tested: [[item:INV-1026]], [[item:INV-1039]], [[item:INV-1042]], [[item:INV-1045]], [[item:INV-1046]], [[item:INV-1061]], [[item:INV-1072]], [[item:INV-1078]], [[item:INV-1103]], [[item:INV-1108]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], and [[item:INV-1119]].\n\nResults: All sampled invoice totals agreed with subsequent bank deposits. General ledger postings and shipped quantities agreed with invoices except as noted below. No sampled invoice and shipment dates fell on opposite sides of year-end.\n\nExceptions: For [[item:INV-1103]], the general ledger posting was below the invoice total of [[ev:ev-INV-1103-invoice_amount]], which agreed with the bank deposit. For [[item:INV-1072]], the bill of lading supported only part of the billed quantity. The customer paid the full invoice, but no shipping or bill-and-hold documentation supported the remaining units.\n\nConclusion: No other differences were identified in the comparisons performed. Reconcile the ledger shortfall and obtain evidence of shipment or other support for revenue recognition on the remaining units before closing the exceptions.",
+    "guard_violations": []
+  },
+  "tokens_in": 12882,
+  "tokens_out": 381,
+  "latency_ms": 7626,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

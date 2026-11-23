@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.94,
+        "reason": "The prose describes sampling, comparison to bills of lading, tracing to bank deposits, and reconciliation to the general ledger."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 25 sampled invoice IDs in the item list are named with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.97,
+        "reason": "Each flagged item and the INV-1104 bill-and-hold judgment outcome are identified with item markers and an explanation of the issue or outcome."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "A Conclusion: sentence is present and appropriately qualifies the result by leaving the test open pending follow-up on flagged matters."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "All evidence markers resolve to kept fields for the cited items, and the claimed exceptions and tie-out summaries align with the flagged exceptions and outputs."
+      }
+    ]
+  },
+  "tokens_in": 18156,
+  "tokens_out": 829,
+  "latency_ms": 8890,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

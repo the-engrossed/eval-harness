@@ -1,0 +1,33 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 2,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1011",
+        "type": "AMOUNT_MISMATCH",
+        "rationale": "The invoice and bank deposit both show $70,387.52, but the general ledger shows $69,971.32, a shortfall of 41,620 cents."
+      },
+      {
+        "item_id": "INV-1115",
+        "type": "CUTOFF_ERROR",
+        "rationale": "The invoice is dated December 30, 2025, but the bill of lading shows all 317 units shipped January 3, 2026. The shipment does not support FY2025 recognition; the GL posting date was not provided."
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1064",
+        "type": "PARTIAL_SHIPMENT",
+        "outcome": "exception",
+        "rationale": "The invoice bills 304 units at $286.27 each, but the June 21, 2025 bill of lading shows only 289 units shipped. The full deposit matches the invoice but does not establish shipment of the remaining 15 units ($4,294.05)."
+      }
+    ]
+  },
+  "tokens_in": 9292,
+  "tokens_out": 328,
+  "latency_ms": 6979,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

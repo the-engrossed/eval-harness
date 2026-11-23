@@ -1,0 +1,28 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "flag_exceptions",
+  "run_index": 0,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1103",
+        "type": "AMOUNT_MISMATCH",
+        "rationale": "amount mismatch indicated by the evidence"
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1072",
+        "type": "PARTIAL_SHIPMENT",
+        "outcome": "exception",
+        "rationale": "compares the quantity on the bill of lading to the invoiced quantity; states how much of the invoice the shipped quantity supports; states whether revenue for the unshipped quantity was recognised in the year"
+      }
+    ]
+  },
+  "tokens_in": 8645,
+  "tokens_out": 107,
+  "latency_ms": 45,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

@@ -1,0 +1,33 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 1,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1015",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "The invoice agrees to the GL, but no bill of lading or bank statement line referencing the invoice was provided."
+      },
+      {
+        "item_id": "INV-1026",
+        "type": "AMOUNT_MISMATCH",
+        "rationale": "The GL is 11,888 cents below the invoice; the bank deposit agrees to the invoice."
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1110",
+        "type": "BILL_AND_HOLD",
+        "outcome": "exception",
+        "rationale": "The customer letter requests a hold until 2026-01-25, and the warehouse note records 396 segregated units, matching the invoice. The excerpts do not establish a substantive reason for the hold or show that, by 2025-12-31, the goods were ready for transfer and could not be redirected. The evidence therefore does not support year-end recognition."
+      }
+    ]
+  },
+  "tokens_in": 14500,
+  "tokens_out": 446,
+  "latency_ms": 10002,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.97,
+        "reason": "The prose describes testing samples, comparing invoice quantities/dates with bills of lading, agreeing totals to deposits where available, and tying totals to the general ledger."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 15 sampled invoice IDs are named with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.96,
+        "reason": "The prose explains the duplicate/missing-support issue for INV-1030 and the post-year-end shipment and unresolved cutoff outcome for INV-1113, with item markers."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.91,
+        "reason": "A Conclusion: sentence is present. It limits the no-exception statement to the other thirteen samples and directs follow-up on both flagged matters."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "Every cited evidence ID resolves to a kept field for the stated item, and the claimed duplicate, missing support, and cutoff matters align with the flagged exceptions."
+      }
+    ]
+  },
+  "tokens_in": 11175,
+  "tokens_out": 657,
+  "latency_ms": 7171,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

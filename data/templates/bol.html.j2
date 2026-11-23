@@ -1,0 +1,19 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><title>Bill of lading {{ bol_id }}</title>
+<style>body{font-family:Georgia,serif;margin:2em}</style>
+</head>
+<body>
+<section class="page" data-page-no="1">
+  <h1>Bill of lading {{ bol_id }}</h1>
+  <p>Shipper: {{ seller }}, {{ seller_address }}</p>
+  <p>Consignee: {{ payer }}</p>
+  <p>Carrier: {{ carrier }}</p>
+  <p>Invoice reference: {{ invoice_id }}</p>
+  <p>Goods: {{ description }}</p>
+  <p>{{ ship_date_line }}</p>
+  <p>{{ shipped_quantity_line }}</p>
+  <p>Received in good order by the carrier.</p>
+</section>
+</body>
+</html>

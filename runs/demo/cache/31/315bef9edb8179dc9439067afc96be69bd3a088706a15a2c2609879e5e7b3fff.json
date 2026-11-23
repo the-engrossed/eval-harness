@@ -1,0 +1,26 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "flag_exceptions",
+  "run_index": 2,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1030",
+        "type": "DUPLICATE_INVOICE",
+        "rationale": "duplicate invoice indicated by the evidence"
+      },
+      {
+        "item_id": "INV-1113",
+        "type": "CUTOFF_ERROR",
+        "rationale": "cutoff error indicated by the evidence"
+      }
+    ],
+    "judgments": []
+  },
+  "tokens_in": 7018,
+  "tokens_out": 59,
+  "latency_ms": 42,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

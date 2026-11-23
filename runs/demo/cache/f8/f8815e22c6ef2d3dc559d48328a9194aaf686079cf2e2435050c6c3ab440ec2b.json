@@ -1,0 +1,38 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "flag_exceptions",
+  "run_index": 0,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1046",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "missing evidence indicated by the evidence"
+      },
+      {
+        "item_id": "INV-1064",
+        "type": "DUPLICATE_INVOICE",
+        "rationale": "duplicate invoice indicated by the evidence"
+      },
+      {
+        "item_id": "INV-1117",
+        "type": "CUTOFF_ERROR",
+        "rationale": "cutoff error indicated by the evidence"
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1104",
+        "type": "BILL_AND_HOLD",
+        "outcome": "exception",
+        "rationale": "states that the customer requested the hold; states that the goods were segregated from other inventory; states whether title and risk passed to the customer before year end"
+      }
+    ]
+  },
+  "tokens_in": 11520,
+  "tokens_out": 149,
+  "latency_ms": 47,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.97,
+        "reason": "The prose describes comparing invoice totals to the GL and available deposits, and comparing invoice dates and quantities to bills of lading where available; it also identifies the samples tested."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled invoice ID is included with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose identifies and explains the missing-evidence issue for INV-1015, the GL amount difference for INV-1026, and the unsupported bill-and-hold revenue judgment for INV-1110."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": false,
+        "confidence": 0.99,
+        "reason": "A Conclusion sentence is present, but it says the evidence supports the samples without exceptions despite the flagged matters; it does not qualify the conclusion."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "All cited evidence IDs are kept fields belonging to the referenced items, and the prose's claimed exceptions align with the flagged exception and judgment records."
+      }
+    ]
+  },
+  "tokens_in": 15385,
+  "tokens_out": 734,
+  "latency_ms": 7657,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

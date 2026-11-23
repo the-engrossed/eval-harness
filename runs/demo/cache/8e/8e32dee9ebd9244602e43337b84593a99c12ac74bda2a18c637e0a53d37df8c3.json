@@ -1,0 +1,15 @@
+{
+  "provider": "stub",
+  "model_id": "stub-prod",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "prose": "Procedures performed: selected items under the stated sampling rule, agreed each invoice to its bill of lading and the bank statement, and tied each invoice to the general ledger. Samples tested: [[item:INV-1002]] ([[ev:ev-INV-1002-invoice_amount]]), [[item:INV-1009]] ([[ev:ev-INV-1009-invoice_amount]]), [[item:INV-1015]] ([[ev:ev-INV-1015-invoice_amount]]), [[item:INV-1020]] ([[ev:ev-INV-1020-invoice_amount]]), [[item:INV-1026]] ([[ev:ev-INV-1026-invoice_amount]]), [[item:INV-1028]] ([[ev:ev-INV-1028-invoice_amount]]), [[item:INV-1039]] ([[ev:ev-INV-1039-invoice_amount]]), [[item:INV-1066]] ([[ev:ev-INV-1066-invoice_amount]]), [[item:INV-1079]] ([[ev:ev-INV-1079-invoice_amount]]), [[item:INV-1092]] ([[ev:ev-INV-1092-invoice_amount]]), [[item:INV-1110]] ([[ev:ev-INV-1110-invoice_amount]]), [[item:INV-1112]] ([[ev:ev-INV-1112-invoice_amount]]), [[item:INV-1113]] ([[ev:ev-INV-1113-invoice_amount]]), [[item:INV-1114]] ([[ev:ev-INV-1114-invoice_amount]]), [[item:INV-1115]] ([[ev:ev-INV-1115-invoice_amount]]), [[item:INV-1116]] ([[ev:ev-INV-1116-invoice_amount]]), [[item:INV-1117]] ([[ev:ev-INV-1117-invoice_amount]]), [[item:INV-1118]] ([[ev:ev-INV-1118-invoice_amount]]), [[item:INV-1119]] ([[ev:ev-INV-1119-invoice_amount]]), [[item:INV-1120]] ([[ev:ev-INV-1120-invoice_amount]]), [[item:INV-1121]] ([[ev:ev-INV-1121-invoice_amount]]). Matters noted: missing evidence on [[item:INV-1015]]; amount mismatch on [[item:INV-1026]]; exception on [[item:INV-1110]]. Conclusion: subject to the matters above, the items tested support recorded revenue.",
+    "guard_violations": []
+  },
+  "tokens_in": 9993,
+  "tokens_out": 398,
+  "latency_ms": 59,
+  "provider_model_id": "stub-prod",
+  "simulated": true
+}

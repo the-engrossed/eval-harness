@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose describes agreeing invoice totals to the GL, comparing quantities and dates with bills of lading, and tracing invoice totals to bank deposits."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 15 sampled invoice IDs are named with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose identifies the potential duplicate and missing shipment/deposit support for INV-1030, and explains the post-year-end shipment and unresolved cut-off issue for INV-1113. There are no flagged judgments."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.89,
+        "reason": "A Conclusion sentence is present and leaves the duplicate and cut-off matters unresolved pending investigation, rather than stating an unqualified clean conclusion."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "Each cited evidence ID resolves to a kept field for the named item, and the prose’s exception claims agree with the flagged exceptions."
+      }
+    ]
+  },
+  "tokens_in": 11197,
+  "tokens_out": 798,
+  "latency_ms": 7964,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

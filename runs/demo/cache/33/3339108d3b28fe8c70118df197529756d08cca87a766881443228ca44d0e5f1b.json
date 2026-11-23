@@ -1,0 +1,10 @@
+{
+  "kind": "failure",
+  "provider": "openai_compat",
+  "model_id": "qwen3:8b",
+  "node": "extract_evidence",
+  "run_index": 0,
+  "failure_origin": "infra",
+  "message": "openai_compat qwen3:8b at extract_evidence: timed out: Request timed out.",
+  "source_run_id": "core-real-20261123T192733Z"
+}

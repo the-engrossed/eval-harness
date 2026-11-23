@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 2,
+  "output": {
+    "prose": "Procedures performed: Compared invoice totals to the general ledger and available bank deposits. Compared invoice dates and quantities to bills of lading where available and checked whether invoice and shipment dates fell on the same side of year-end. Reviewed the customer hold request and warehouse note for the bill-and-hold transaction.\n\nSamples tested: [[item:INV-1002]], [[item:INV-1009]], [[item:INV-1015]], [[item:INV-1020]], [[item:INV-1026]], [[item:INV-1028]], [[item:INV-1039]], [[item:INV-1066]], [[item:INV-1079]], [[item:INV-1092]], [[item:INV-1110]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], [[item:INV-1119]], [[item:INV-1120]], and [[item:INV-1121]].\n\nResults: Eighteen samples had complete support and no exceptions. All available deposits agreed to the corresponding invoice totals. Where bills of lading were available, shipped quantities agreed to invoiced quantities, and shipment and invoice dates fell on the same side of year-end.\n\nExceptions:\n- [[item:INV-1015]]: The invoice agreed to the general ledger, but no bill of lading or matching bank entry was supplied. Shipment and collection could not be verified.\n- [[item:INV-1026]]: The invoice total [[ev:ev-INV-1026-invoice_amount]] agreed to the deposit [[ev:ev-INV-1026-deposit_amount]], but the general ledger amount was lower.\n- [[item:INV-1110]]: The invoice agreed to the general ledger and subsequent deposit. No bill of lading was supplied. The customer requested a hold until [[ev:ev-INV-1110-hold_until_date]], and the warehouse note showed that all invoiced units were segregated. The evidence did not establish a substantive reason for the hold or show that the goods were ready for transfer and could not be redirected by the seller at year-end. Year-end revenue recognition was not supported.\n\nConclusion: The evidence supports the samples without exceptions. Before closing the test, obtain shipment and collection support for the missing-evidence item, reconcile the ledger difference, and determine whether the bill-and-hold revenue requires a cutoff adjustment.",
+    "guard_violations": []
+  },
+  "tokens_in": 14641,
+  "tokens_out": 561,
+  "latency_ms": 9008,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.84,
+        "reason": "The prose describes testing sampled invoices against GL postings and available bank deposits, and comparing invoice dates and quantities with available bills of lading. The sample list establishes the tested population."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "Every sampled item ID in the supplied item list is named with an [[item:<id>]] marker."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "The prose identifies and explains the missing-evidence exception for INV-1015, the amount mismatch for INV-1026, and the bill-and-hold judgment for INV-1110, each with an item marker."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": false,
+        "confidence": 0.82,
+        "reason": "A Conclusion: sentence is present and notes three exceptions, but it gives follow-up actions rather than a clearly qualified conclusion about the test results (such as an 'except for' or 'subject to' conclusion)."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.91,
+        "reason": "The cited evidence IDs are kept fields and belong to their referenced items. The described mismatch and other flagged matters align with the tie-outs and exception/judgment outputs."
+      }
+    ]
+  },
+  "tokens_in": 15334,
+  "tokens_out": 1843,
+  "latency_ms": 18421,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

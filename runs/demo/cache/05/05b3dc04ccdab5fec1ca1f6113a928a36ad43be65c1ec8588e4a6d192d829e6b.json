@@ -1,0 +1,48 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "flag_exceptions",
+  "run_index": 1,
+  "output": {
+    "exceptions": [
+      {
+        "item_id": "INV-1046",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "The $90,216.06 invoice agrees to the GL, but no bill of lading or bank statement entry references it."
+      },
+      {
+        "item_id": "INV-1064",
+        "type": "DUPLICATE_INVOICE",
+        "rationale": "Both invoices were recorded in the GL and match on customer C-002, invoice date, product, quantity (74), and amount ($87,451.72). Only INV-1063 has shipment and deposit support."
+      },
+      {
+        "item_id": "INV-1064",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "No bill of lading or bank statement entry independently supports INV-1064."
+      },
+      {
+        "item_id": "INV-1104",
+        "type": "MISSING_EVIDENCE",
+        "rationale": "The hold letter and warehouse note document the customer's request and segregation, but do not establish the reason for the hold, readiness for transfer, or whether the seller could redirect the goods."
+      },
+      {
+        "item_id": "INV-1117",
+        "type": "CUTOFF_ERROR",
+        "rationale": "The invoice is dated 2025-12-30, but the bill of lading shows all 365 units shipped on 2026-01-03. The shipment supports 2026 recognition; verify the GL posting period because the tie-out provides only the amount."
+      }
+    ],
+    "judgments": [
+      {
+        "item_id": "INV-1104",
+        "type": "BILL_AND_HOLD",
+        "outcome": "exception",
+        "rationale": "The customer letter asks the seller to hold the goods until 2026-01-11, the warehouse note records segregation of all 346 invoiced units, and the bank statement shows receipt of $39,267.54 on 2025-12-22. These documents do not establish a substantive reason for the hold, that the goods were ready for transfer by year-end, or that the seller could not use or redirect them. The evidence is therefore insufficient to support 2025 recognition."
+      }
+    ]
+  },
+  "tokens_in": 17033,
+  "tokens_out": 677,
+  "latency_ms": 13539,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

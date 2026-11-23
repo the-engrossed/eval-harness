@@ -1,0 +1,207 @@
+# Model configs (SPEC.md §6.2). Prices live only here, one [[price]] per real provider
+# model_id (stubs may have simulated ones), each with source_url and as_of copied from the provider's pricing page.
+
+[production]
+config_id = "prod"            # the baseline the gate compares against
+
+[[model]]
+config_id = "prod"
+provider = "stub"
+model_id = "stub-prod"
+prompt_version = "v1"
+simulated = true
+
+# Candidate stubs (SPEC.md §6.3). Each acts at one node; see auditlab/models/stub_profiles.py.
+[[model]]
+config_id = "stub-cand-good"
+provider = "stub"
+model_id = "stub-cand-good"
+prompt_version = "v1"
+simulated = true
+
+[[model]]
+config_id = "stub-cand-cutoff"
+provider = "stub"
+model_id = "stub-cand-cutoff"
+prompt_version = "v1"
+simulated = true
+
+[[model]]
+config_id = "stub-cand-noisy"
+provider = "stub"
+model_id = "stub-cand-noisy"
+prompt_version = "v1"
+simulated = true
+
+# Simulated prices for the stubs (not from any pricing page), so cost differs across the
+# matrix: cand-good is the cheaper candidate.
+[[price]]
+model_id = "stub-prod"
+input_usd_per_mtok = 3.00
+output_usd_per_mtok = 15.00
+source_url = "simulated"
+as_of = "2026-11-18"
+
+[[price]]
+model_id = "stub-cand-good"
+input_usd_per_mtok = 1.00
+output_usd_per_mtok = 5.00
+source_url = "simulated"
+as_of = "2026-11-18"
+
+[[price]]
+model_id = "stub-cand-cutoff"
+input_usd_per_mtok = 3.00
+output_usd_per_mtok = 15.00
+source_url = "simulated"
+as_of = "2026-11-18"
+
+[[price]]
+model_id = "stub-cand-noisy"
+input_usd_per_mtok = 3.00
+output_usd_per_mtok = 15.00
+source_url = "simulated"
+as_of = "2026-11-18"
+
+# --- Real configs (T19). Local models run on Ollama (http://localhost:11434) started with
+# OLLAMA_CONTEXT_LENGTH=32768, self-hosted at $0 per token, thinking off.
+# max_output_tokens = 32768 for every real config: the largest correct extract_evidence answer
+# on this suite (s1-mixD, 192 fields) is about 15.7k tokens, and OpenAI counts reasoning tokens
+# toward max_completion_tokens, so 16384 could cut off correct output. Not tuned to any
+# model's results.
+# context_window_tokens + prompt_bytes_per_token drive the pre-call check
+# (auditlab/models/prompt_size.py). Each ratio is measured the same way: the 12,681 bytes of
+# the s1-mixA select_samples request (model-independent input) over the prompt tokens the
+# provider reported for it, rounded to 2 places. The OpenAI config needs OPENAI_API_KEY in .env; its price is from the pricing page.
+[[model]]
+config_id = "openai-gpt-6.2-sol"
+provider = "openai_compat"
+model_id = "gpt-6.2-sol"
+base_url = "https://api.openai.com/v1"
+api_key_env = "OPENAI_API_KEY"
+timeout_s = 300
+max_output_tokens = 32768                 # same cap for every real config; see header note
+max_output_tokens_field = "max_completion_tokens"   # OpenAI: max_tokens is deprecated
+context_window_tokens = 1050000           # developers.openai.com/api/docs/models/gpt-6.2-sol
+prompt_bytes_per_token = 3.10             # 12681 B / 4086 tok, gpt-6.2-sol smoke 2026-11-23
+prompt_version = "v1"
+simulated = false
+
+[[price]]
+model_id = "gpt-6.2-sol"
+input_usd_per_mtok = 2.00     # Standard tier, short context (<=272K input tokens)
+output_usd_per_mtok = 10.00
+source_url = "https://developers.openai.com/api/docs/pricing"
+as_of = "2026-11-18"
+
+[[model]]
+config_id = "local-qwen3-8b"
+provider = "openai_compat"
+model_id = "qwen3:8b"
+base_url = "http://localhost:11434/v1"
+timeout_s = 300
+reasoning_effort = "none"     # Ollama: "none" turns thinking off (docs.ollama.com/api/openai-compatibility)
+max_output_tokens = 32768     # same cap for every real config; Ollama documents max_tokens
+context_window_tokens = 32768 # OLLAMA_CONTEXT_LENGTH above; Ollama truncates silently past it
+prompt_bytes_per_token = 2.33 # 12681 B / 5449 tok, qwen3:8b smoke 2026-11-18 (runs/smoke-s1-mixA-local-qwen3-8b)
+prompt_version = "v1"
+simulated = false
+
+[[price]]
+model_id = "qwen3:8b"
+input_usd_per_mtok = 0
+output_usd_per_mtok = 0
+source_url = "self-hosted"
+as_of = "2026-11-18"
+
+# Judge for real runs (SPEC.md §9.5): set AUDITLAB_JUDGE_CONFIG=openai-gpt-6-luna-judge.
+# A separate, cheaper model than any model under test; reasoning_effort left at the model
+# default (medium). Needs OPENAI_API_KEY.
+[[model]]
+config_id = "openai-gpt-6-luna-judge"
+provider = "openai_compat"
+model_id = "gpt-6-luna"
+base_url = "https://api.openai.com/v1"
+api_key_env = "OPENAI_API_KEY"
+timeout_s = 300
+max_output_tokens = 32768                 # same cap for every real config; see header note
+max_output_tokens_field = "max_completion_tokens"
+context_window_tokens = 1050000           # developers.openai.com/api/docs/models/gpt-6-luna
+prompt_bytes_per_token = 3.10             # gpt-6.2-sol's measurement; same provider; not yet measured on luna
+prompt_version = "v1"
+simulated = false
+
+[[price]]
+model_id = "gpt-6-luna"
+input_usd_per_mtok = 0.10     # Standard tier, short context (<=272K input tokens)
+output_usd_per_mtok = 0.50
+source_url = "https://developers.openai.com/api/docs/pricing"
+as_of = "2026-11-23"
+
+# --- Replay of the committed real-model recording (runs/demo/cache, make record-real).
+# Each mirrors its recorded config (same model_id, prompt_version, reasoning_effort and
+# max_output_tokens, which are all in the cache key). A miss raises; no network.
+[[model]]
+config_id = "replay-openai-gpt-6.2-sol"
+provider = "replay"
+replay_provider = "openai_compat"
+model_id = "gpt-6.2-sol"
+max_output_tokens = 32768
+prompt_version = "v1"
+simulated = false
+
+[[model]]
+config_id = "replay-local-qwen3-8b"
+provider = "replay"
+replay_provider = "openai_compat"
+model_id = "qwen3:8b"
+reasoning_effort = "none"
+max_output_tokens = 32768
+prompt_version = "v1"
+simulated = false
+
+[[model]]
+config_id = "replay-openai-gpt-6-luna-judge"
+provider = "replay"
+replay_provider = "openai_compat"
+model_id = "gpt-6-luna"
+max_output_tokens = 32768
+prompt_version = "v1"
+simulated = false
+
+# --- Example local configs (provider openai_compat). Uncomment, then set model_id in both
+# the [[model]] and its [[price]] to the id your server reports. Self-hosted models cost $0
+# per token; the price entry is still required so cost is never silently missing.
+# timeout_s = 300 because extraction prompts carry several documents.
+#
+# [[model]]
+# config_id = "local-ollama"
+# provider = "openai_compat"
+# model_id = "<ollama model tag>"
+# base_url = "http://localhost:11434/v1"
+# timeout_s = 300
+# prompt_version = "v1"
+# simulated = false
+#
+# [[price]]
+# model_id = "<ollama model tag>"
+# input_usd_per_mtok = 0
+# output_usd_per_mtok = 0
+# source_url = "self-hosted"
+# as_of = "2026-11-17"
+#
+# [[model]]
+# config_id = "local-lmstudio"
+# provider = "openai_compat"
+# model_id = "<lm studio model id>"
+# base_url = "http://localhost:1234/v1"
+# timeout_s = 300
+# prompt_version = "v1"
+# simulated = false
+#
+# [[price]]
+# model_id = "<lm studio model id>"
+# input_usd_per_mtok = 0
+# output_usd_per_mtok = 0
+# source_url = "self-hosted"
+# as_of = "2026-11-17"

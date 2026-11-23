@@ -1,0 +1,45 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6-luna",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "verdicts": [
+      {
+        "criterion": "procedures_described",
+        "passed": true,
+        "confidence": 0.94,
+        "reason": "The prose describes testing invoices against GL amounts and bank deposits, and comparing invoice quantities and dates with bills of lading; the sample list indicates the invoices tested."
+      },
+      {
+        "criterion": "samples_identified",
+        "passed": true,
+        "confidence": 1.0,
+        "reason": "All 13 sampled invoice IDs are named with [[item:<id>]] markers."
+      },
+      {
+        "criterion": "exceptions_explained",
+        "passed": true,
+        "confidence": 0.98,
+        "reason": "The prose names INV-1011's GL discrepancy, INV-1064's partial shipment, and INV-1115's cutoff concern, including the relevant outcomes."
+      },
+      {
+        "criterion": "conclusion_supported",
+        "passed": true,
+        "confidence": 0.78,
+        "reason": "A Conclusion: sentence is present and calls for follow-up on each flagged matter before concluding on the exceptions, qualifying the conclusion although not with an explicit 'subject to' phrase."
+      },
+      {
+        "criterion": "no_unsupported_claims",
+        "passed": true,
+        "confidence": 0.99,
+        "reason": "All cited evidence IDs resolve to kept fields for the matching items, and the claimed discrepancies and shipment/cutoff matters align with the flagged results."
+      }
+    ]
+  },
+  "tokens_in": 10013,
+  "tokens_out": 831,
+  "latency_ms": 7938,
+  "provider_model_id": "gpt-6-luna",
+  "simulated": false
+}

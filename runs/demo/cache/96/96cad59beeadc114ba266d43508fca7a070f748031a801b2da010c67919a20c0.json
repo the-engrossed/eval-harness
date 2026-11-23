@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 0,
+  "output": {
+    "prose": "Procedures performed: Reconciled sampled invoice totals to the general ledger and traced them to bank deposits where available. Compared invoiced quantities and dates with bills of lading, reviewed the flagged potential duplicate, and assessed the customer hold letter and warehouse segregation note for evidence of transfer of control.\n\nSamples tested: Twenty-five invoices: [[item:INV-1007]], [[item:INV-1029]], [[item:INV-1046]], [[item:INV-1063]], [[item:INV-1064]], [[item:INV-1077]], [[item:INV-1078]], [[item:INV-1087]], [[item:INV-1092]], [[item:INV-1096]], [[item:INV-1099]], [[item:INV-1104]], [[item:INV-1111]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], [[item:INV-1119]], [[item:INV-1120]], [[item:INV-1121]], [[item:INV-1122]], and [[item:INV-1123]].\n\nResults: All invoice totals agreed to the general ledger. All twenty-three available deposits matched the invoice totals, and all twenty-two available bills of lading matched the invoiced quantities.\n\nExceptions:\n- [[item:INV-1046]]: No bill of lading or matching bank deposit was available.\n- [[item:INV-1064]]: Potential duplicate of [[item:INV-1063]], with the same customer, invoice date, product, quantity, and total. Only [[item:INV-1063]] had shipment and deposit support.\n- [[item:INV-1104]]: No bill of lading was available. The customer requested a hold until [[ev:ev-INV-1104-hold_until_date]], the warehouse note confirmed segregation of the full invoiced quantity, and the bank statement showed full payment. The evidence did not establish a substantive reason for the hold, readiness for transfer at year-end, or that the seller could not redirect the goods. Transfer of control by year-end was not established.\n- [[item:INV-1117]]: Invoiced on [[ev:ev-INV-1117-invoice_date]] and shipped in full after year-end on [[ev:ev-INV-1117-ship_date]]. The general ledger posting date was not provided, so early revenue recognition remains a potential cutoff error, not a confirmed misstatement.\n\nConclusion: No exceptions were noted for the other sampled items. The revenue test remains open pending follow-up on missing support, the potential duplicate, the bill-and-hold recognition criteria, and the actual posting period for the cutoff item.",
+    "guard_violations": []
+  },
+  "tokens_in": 17344,
+  "tokens_out": 623,
+  "latency_ms": 10112,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}

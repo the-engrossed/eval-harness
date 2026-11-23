@@ -1,0 +1,15 @@
+{
+  "provider": "openai_compat",
+  "model_id": "gpt-6.2-sol",
+  "node": "draft_workpaper",
+  "run_index": 2,
+  "output": {
+    "prose": "Procedures performed: Agreed invoice totals to the general ledger and traced them to bank deposits where available. Compared billed quantities and invoice dates with bills of lading to assess shipment and year-end cutoff. Reviewed the potential duplicate and evaluated the customer hold letter and warehouse note for evidence of transfer of control.\n\nSamples tested: Twenty-five invoices: [[item:INV-1007]], [[item:INV-1029]], [[item:INV-1046]], [[item:INV-1063]], [[item:INV-1064]], [[item:INV-1077]], [[item:INV-1078]], [[item:INV-1087]], [[item:INV-1092]], [[item:INV-1096]], [[item:INV-1099]], [[item:INV-1104]], [[item:INV-1111]], [[item:INV-1112]], [[item:INV-1113]], [[item:INV-1114]], [[item:INV-1115]], [[item:INV-1116]], [[item:INV-1117]], [[item:INV-1118]], [[item:INV-1119]], [[item:INV-1120]], [[item:INV-1121]], [[item:INV-1122]], and [[item:INV-1123]].\n\nResults: All invoice totals agreed to the general ledger. All twenty-three available deposits matched invoice totals, and all twenty-two available bills of lading matched billed quantities. Four sampled invoices had exceptions.\n\nExceptions:\n- [[item:INV-1046]] had no supporting bill of lading or bank deposit reference.\n- [[item:INV-1064]] is a potential duplicate of [[item:INV-1063]]: the customer, invoice date, product, quantity, and total matched. Only [[item:INV-1063]] had shipment and deposit support.\n- [[item:INV-1104]] had no bill of lading. The customer requested a hold until [[ev:ev-INV-1104-hold_until_date]], and the warehouse note confirmed segregation of all billed units. The documents did not establish a substantive reason for the hold, readiness for transfer by year-end, or that the seller could not redirect the goods. The matching deposit did not establish transfer of control.\n- [[item:INV-1117]] was invoiced on [[ev:ev-INV-1117-invoice_date]], but all units shipped after year-end on [[ev:ev-INV-1117-ship_date]]. The shipment evidence did not support recognition in the fiscal year tested.\n\nConclusion: No exceptions were identified for the other twenty-one sampled invoices. Obtain alternative support for the unsupported sale, investigate the potential duplicate, and evaluate whether the bill-and-hold and cutoff items require revenue adjustments before concluding on the test.",
+    "guard_violations": []
+  },
+  "tokens_in": 17335,
+  "tokens_out": 611,
+  "latency_ms": 9516,
+  "provider_model_id": "gpt-6.2-sol",
+  "simulated": false
+}
